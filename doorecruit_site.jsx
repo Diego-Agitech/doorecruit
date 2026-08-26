@@ -165,7 +165,7 @@ export default function DooRecruit() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <button onClick={() => setCurrentPage('home')} className="flex items-center gap-3">
-              <div className="text-2xl font-black tracking-tight text-brand-50">
+              <div className="text-2xl font-display font-bold tracking-tight text-brand-50">
                 DOO<span className="text-brand-amber">RECRUIT</span>
               </div>
             </button>
@@ -176,7 +176,7 @@ export default function DooRecruit() {
               <button onClick={() => setCurrentPage('jobs')} className="text-brand-50/70 hover:text-brand-amber font-medium transition">Offres</button>
               <button onClick={() => setCurrentPage('blog')} className="text-brand-50/70 hover:text-brand-amber font-medium transition">Blog</button>
               <button onClick={() => setCurrentPage('talents')} className="text-brand-50/70 hover:text-brand-amber font-medium transition">Je cherche un rôle</button>
-              <button onClick={() => setCurrentPage('contact')} className="text-brand-50/70 hover:text-brand-amber font-medium transition">Contact</button>
+              <button onClick={() => setCurrentPage('contact')} className="text-brand-50/70 hover:text-brand-amber font-medium transition">Recruter un talent</button>
               <button onClick={() => setCurrentPage('about')} className="text-brand-50/70 hover:text-brand-amber font-medium transition">À propos</button>
             </div>
 
@@ -195,7 +195,7 @@ export default function DooRecruit() {
               <button onClick={() => { setCurrentPage('jobs'); setMenuOpen(false); }} className="block w-full text-left text-brand-50/70 hover:text-brand-amber font-medium py-2">Offres</button>
               <button onClick={() => { setCurrentPage('blog'); setMenuOpen(false); }} className="block w-full text-left text-brand-50/70 hover:text-brand-amber font-medium py-2">Blog</button>
               <button onClick={() => { setCurrentPage('talents'); setMenuOpen(false); }} className="block w-full text-left text-brand-50/70 hover:text-brand-amber font-medium py-2">Je cherche un rôle</button>
-              <button onClick={() => { setCurrentPage('contact'); setMenuOpen(false); }} className="block w-full text-left text-brand-50/70 hover:text-brand-amber font-medium py-2">Contact</button>
+              <button onClick={() => { setCurrentPage('contact'); setMenuOpen(false); }} className="block w-full text-left text-brand-50/70 hover:text-brand-amber font-medium py-2">Recruter un talent</button>
               <button onClick={() => { setCurrentPage('about'); setMenuOpen(false); }} className="block w-full text-left text-brand-50/70 hover:text-brand-amber font-medium py-2">À propos</button>
             </div>
           </div>
@@ -210,10 +210,11 @@ export default function DooRecruit() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <div className="text-xl font-black mb-3">
+              <div className="text-xl font-display font-bold mb-3">
                 DOO<span className="text-brand-amber">RECRUIT</span>
               </div>
               <p className="text-brand-50/50">Le match juste. Sans blabla.</p>
+              <p className="text-brand-50/40 text-sm mt-2">France 🇫🇷 • Belgique 🇧🇪</p>
             </div>
             <div>
               <h4 className="font-bold mb-4 text-brand-50">Navigation</h4>
@@ -261,12 +262,13 @@ function HomePage({ setCurrentPage }) {
       <section className="bg-brand-950 py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <p className="uppercase tracking-widest text-sm text-brand-amber font-bold mb-4">Le match juste. Sans blabla.</p>
-          <h1 className="text-5xl md:text-6xl font-black mb-6 text-brand-50">
+          <h1 className="text-5xl md:text-6xl font-display font-bold mb-6 text-brand-50">
             Recrutez les meilleurs talents Odoo
           </h1>
-          <p className="text-xl md:text-2xl mb-8 text-brand-50/60">
+          <p className="text-xl md:text-2xl mb-3 text-brand-50/60">
             L'agence spécialisée qui connecte les entreprises aux experts Odoo
           </p>
+          <p className="text-sm text-brand-50/40 mb-8">Recrutement en France 🇫🇷 et en Belgique 🇧🇪</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <button onClick={() => setCurrentPage('jobs')} className="bg-brand-amber text-brand-950 px-8 py-3 rounded-lg font-bold hover:bg-brand-amber-light transition flex items-center justify-center gap-2">
               Découvrir les offres <ArrowRight size={20} />
@@ -283,15 +285,15 @@ function HomePage({ setCurrentPage }) {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-black text-brand-amber mb-2">500+</div>
+              <div className="text-4xl font-display font-bold text-brand-amber mb-2">500+</div>
               <p className="text-brand-50/60">Talents Odoo dans notre réseau</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-black text-brand-amber mb-2">120+</div>
+              <div className="text-4xl font-display font-bold text-brand-amber mb-2">120+</div>
               <p className="text-brand-50/60">Placements réussis</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-black text-brand-amber mb-2">95%</div>
+              <div className="text-4xl font-display font-bold text-brand-amber mb-2">95%</div>
               <p className="text-brand-50/60">Taux de satisfaction</p>
             </div>
           </div>
@@ -301,7 +303,7 @@ function HomePage({ setCurrentPage }) {
       {/* Services */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-black text-center mb-12 text-brand-50">Nos Services</h2>
+          <h2 className="text-4xl font-display font-bold text-center mb-12 text-brand-50">Nos Services</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <ServiceCard
               icon={<Search size={32} />}
@@ -325,7 +327,7 @@ function HomePage({ setCurrentPage }) {
       {/* Featured Jobs */}
       <section className="py-16 px-4 bg-brand-900 border-y border-brand-700">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-black mb-12 text-brand-50">Dernières opportunités</h2>
+          <h2 className="text-4xl font-display font-bold mb-12 text-brand-50">Dernières opportunités</h2>
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             {[0,1,2,3].map((i) => (
               <JobCard key={i} job={{
@@ -347,7 +349,7 @@ function HomePage({ setCurrentPage }) {
       {/* CTA Section */}
       <section className="py-12 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-black mb-6 text-brand-50">Prêt à trouver votre prochain talent Odoo ?</h2>
+          <h2 className="text-3xl font-display font-bold mb-6 text-brand-50">Prêt à trouver votre prochain talent Odoo ?</h2>
           <p className="text-xl mb-8 text-brand-50/60">Contactez-nous pour discuter de vos besoins de recrutement.</p>
           <button onClick={() => setCurrentPage('contact')} className="bg-brand-amber text-brand-950 px-8 py-3 rounded-lg font-bold hover:bg-brand-amber-light transition">
             Nous contacter
@@ -361,7 +363,7 @@ function HomePage({ setCurrentPage }) {
 function JobsPage({ jobs, filterRole, filterLevel, setFilterRole, setFilterLevel }) {
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-black mb-8 text-brand-50">Offres d'emploi</h1>
+      <h1 className="text-4xl font-display font-bold mb-8 text-brand-50">Offres d'emploi</h1>
 
       {/* Filters */}
       <div className="bg-brand-900 border border-brand-700 p-6 rounded-lg mb-8">
@@ -414,7 +416,7 @@ function JobsPage({ jobs, filterRole, filterLevel, setFilterRole, setFilterLevel
 function BlogPage({ articles }) {
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-black mb-12 text-brand-50">Blog & Ressources Odoo</h1>
+      <h1 className="text-4xl font-display font-bold mb-12 text-brand-50">Blog & Ressources Odoo</h1>
       <div className="grid md:grid-cols-2 gap-8">
         {articles.map(article => (
           <div key={article.id} className="bg-brand-900 border border-brand-700 rounded-lg p-6 hover:border-brand-amber transition">
@@ -489,7 +491,7 @@ function TalentsPage() {
       <div className="max-w-4xl mx-auto px-4 py-12">
         <div className="bg-brand-900 border-2 border-brand-amber rounded-lg p-8 text-center">
           <div className="text-5xl mb-4">✅</div>
-          <h2 className="text-3xl font-black text-brand-amber mb-4">Inscription réussie !</h2>
+          <h2 className="text-3xl font-display font-bold text-brand-amber mb-4">Inscription réussie !</h2>
           <p className="text-brand-50/80 text-lg mb-4">
             Merci de votre inscription. Notre équipe va examiner votre profil et vous contactera dans les 48 heures avec les meilleures opportunités adaptées à vos compétences.
           </p>
@@ -503,7 +505,7 @@ function TalentsPage() {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-black mb-2 text-brand-50">Rejoignez notre base de talents</h1>
+      <h1 className="text-4xl font-display font-bold mb-2 text-brand-50">Rejoignez notre base de talents</h1>
       <p className="text-lg text-brand-50/60 mb-2">Enregistrez votre profil et découvrez les meilleures opportunités Odoo.</p>
       <p className="text-brand-50/40 mb-8">⏱️ 5 minutes pour vous inscrire • 📧 Nous vous contacterons rapidement avec les bonnes offres</p>
 
@@ -624,14 +626,14 @@ function TalentsPage() {
 function AboutPage({ testimonials, setCurrentPage }) {
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-black mb-8 text-brand-50">À propos de DooRecruit</h1>
+      <h1 className="text-4xl font-display font-bold mb-8 text-brand-50">À propos de DooRecruit</h1>
 
       <div className="bg-brand-900 border border-brand-700 p-8 rounded-lg mb-12">
         <h2 className="text-2xl font-bold mb-4 text-brand-50">Notre mission</h2>
         <p className="text-brand-50/70 text-lg mb-4">
           Chez DooRecruit, nous croyons que le recrutement Odoo mérite une expertise spécialisée.
           Notre mission est de connecter les meilleurs talents Odoo avec les entreprises qui les cherchent,
-          en créant des matches authentiques et durables.
+          en créant des matches authentiques et durables — en France 🇫🇷 comme en Belgique 🇧🇪.
         </p>
         <p className="text-brand-50/70 text-lg">
           Nous comprenons la complexité de recruter pour l'écosystème Odoo - c'est pourquoi notre équipe
@@ -639,7 +641,7 @@ function AboutPage({ testimonials, setCurrentPage }) {
         </p>
       </div>
 
-      <h2 className="text-3xl font-black mb-8 text-brand-50">Témoignages</h2>
+      <h2 className="text-3xl font-display font-bold mb-8 text-brand-50">Témoignages</h2>
       <div className="grid md:grid-cols-3 gap-8 mb-12">
         {testimonials.map((testimonial, i) => (
           <div key={i} className="bg-brand-900 border border-brand-700 rounded-lg p-6">
@@ -658,7 +660,7 @@ function AboutPage({ testimonials, setCurrentPage }) {
       </div>
 
       <div className="bg-brand-800 border border-brand-amber rounded-lg p-8 text-center">
-        <h2 className="text-2xl font-black mb-4 text-brand-50">Vous cherchez à recruter?</h2>
+        <h2 className="text-2xl font-display font-bold mb-4 text-brand-50">Vous cherchez à recruter?</h2>
         <p className="mb-6 text-brand-50/70">Contactez notre équipe pour discuter de vos besoins.</p>
         <button onClick={() => setCurrentPage('contact')} className="bg-brand-amber text-brand-950 px-8 py-3 rounded-lg font-bold hover:bg-brand-amber-light transition">
           Nous contacter
@@ -674,6 +676,14 @@ function ContactPage() {
     contact_name: '',
     email: '',
     phone: '',
+    job_title: '',
+    seniority: '',
+    contract_type: '',
+    country: '',
+    work_mode: '',
+    odoo_skills: '',
+    budget: '',
+    start_date: '',
     needs: ''
   });
   const [submitted, setSubmitted] = useState(false);
@@ -694,15 +704,23 @@ function ContactPage() {
           contact_name: formData.contact_name,
           email: formData.email,
           phone: formData.phone,
+          job_title: formData.job_title,
+          seniority: formData.seniority,
+          contract_type: formData.contract_type,
+          country: formData.country,
+          work_mode: formData.work_mode,
+          odoo_skills: formData.odoo_skills,
+          budget: formData.budget,
+          start_date: formData.start_date,
           needs: formData.needs,
-          _subject: `Nouvelle demande de DooRecruit: ${formData.company_name}`,
+          _subject: `Nouveau brief de recrutement: ${formData.company_name} - ${formData.job_title}`,
           _from: formData.email,
         })
       });
 
       if (response.ok) {
         setSubmitted(true);
-        setFormData({ company_name: '', contact_name: '', email: '', phone: '', needs: '' });
+        setFormData({ company_name: '', contact_name: '', email: '', phone: '', job_title: '', seniority: '', contract_type: '', country: '', work_mode: '', odoo_skills: '', budget: '', start_date: '', needs: '' });
         setTimeout(() => setSubmitted(false), 5000);
       }
     } catch (error) {
@@ -718,9 +736,9 @@ function ContactPage() {
       <div className="max-w-4xl mx-auto px-4 py-12">
         <div className="bg-brand-900 border-2 border-brand-amber rounded-lg p-8 text-center">
           <div className="text-5xl mb-4">✅</div>
-          <h2 className="text-3xl font-black text-brand-amber mb-4">Message reçu !</h2>
+          <h2 className="text-3xl font-display font-bold text-brand-amber mb-4">Brief bien reçu !</h2>
           <p className="text-brand-50/80 text-lg mb-4">
-            Merci de nous avoir contactés. Notre équipe va examiner votre demande et vous répondra dans les 24 heures.
+            Merci. Un consultant DooRecruit spécialisé Odoo revient vers vous sous 24h avec une première shortlist de profils.
           </p>
           <p className="text-brand-50/60">
             En attendant, découvrez nos <button onClick={() => window.scrollTo(0, 0)} className="text-brand-amber underline font-bold">dernières offres</button> ou consultez notre blog.
@@ -732,76 +750,202 @@ function ContactPage() {
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-black mb-2 text-brand-50">Recrutez vos talents Odoo</h1>
-      <p className="text-lg text-brand-50/60 mb-12">Contactez notre équipe pour discuter de vos besoins de recrutement spécialisés Odoo.</p>
+      <p className="uppercase tracking-widest text-sm text-brand-amber font-bold mb-3">Search & Selection Odoo</p>
+      <h1 className="text-4xl font-display font-bold mb-2 text-brand-50">Confiez-nous votre recherche de talent Odoo</h1>
+      <p className="text-lg text-brand-50/60 mb-2">Décrivez votre besoin, nos consultants reviennent vers vous sous 24h avec une shortlist qualifiée.</p>
+      <p className="text-sm text-brand-50/40 mb-12">Recrutement en France 🇫🇷 et en Belgique 🇧🇪 — CDI, freelance et intérim</p>
 
       <div className="grid md:grid-cols-2 gap-12">
         {/* Formulaire */}
         <div className="bg-brand-900 border border-brand-700 rounded-lg p-8">
-          <h2 className="text-2xl font-bold mb-6 text-brand-50">Nous contacter</h2>
+          <h2 className="text-2xl font-bold mb-6 text-brand-50">Exprimez votre besoin</h2>
           <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
-              <label className="block text-sm font-bold mb-2 text-brand-50">Nom de l'entreprise *</label>
-              <input
-                type="text"
-                name="company_name"
-                required
-                value={formData.company_name}
-                onChange={(e) => setFormData({...formData, company_name: e.target.value})}
-                className="w-full p-3 bg-brand-950 border border-brand-700 rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber"
-                placeholder="Votre entreprise"
-              />
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <label className="block text-sm font-bold mb-2 text-brand-50">Nom de l'entreprise *</label>
+                <input
+                  type="text"
+                  name="company_name"
+                  required
+                  value={formData.company_name}
+                  onChange={(e) => setFormData({...formData, company_name: e.target.value})}
+                  className="w-full p-3 bg-brand-950 border border-brand-700 rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber"
+                  placeholder="Votre entreprise"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-bold mb-2 text-brand-50">Votre nom / fonction *</label>
+                <input
+                  type="text"
+                  name="contact_name"
+                  required
+                  value={formData.contact_name}
+                  onChange={(e) => setFormData({...formData, contact_name: e.target.value})}
+                  className="w-full p-3 bg-brand-950 border border-brand-700 rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber"
+                  placeholder="Ex: Sophie Durand, DRH"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-bold mb-2 text-brand-50">Email professionnel *</label>
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  value={formData.email}
+                  onChange={(e) => setFormData({...formData, email: e.target.value})}
+                  className="w-full p-3 bg-brand-950 border border-brand-700 rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber"
+                  placeholder="contact@entreprise.com"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-bold mb-2 text-brand-50">Téléphone</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                  className="w-full p-3 bg-brand-950 border border-brand-700 rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber"
+                  placeholder="+33 6 12 34 56 78"
+                />
+              </div>
             </div>
 
-            <div>
-              <label className="block text-sm font-bold mb-2 text-brand-50">Votre nom *</label>
-              <input
-                type="text"
-                name="contact_name"
-                required
-                value={formData.contact_name}
-                onChange={(e) => setFormData({...formData, contact_name: e.target.value})}
-                className="w-full p-3 bg-brand-950 border border-brand-700 rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber"
-                placeholder="Votre nom"
-              />
-            </div>
+            <div className="border-t border-brand-700 pt-6">
+              <p className="text-xs uppercase tracking-widest text-brand-50/40 font-bold mb-4">Le poste recherché</p>
 
-            <div>
-              <label className="block text-sm font-bold mb-2 text-brand-50">Email *</label>
-              <input
-                type="email"
-                name="email"
-                required
-                value={formData.email}
-                onChange={(e) => setFormData({...formData, email: e.target.value})}
-                className="w-full p-3 bg-brand-950 border border-brand-700 rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber"
-                placeholder="contact@entreprise.com"
-              />
-            </div>
+              <div className="grid md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label className="block text-sm font-bold mb-2 text-brand-50">Intitulé du poste *</label>
+                  <input
+                    type="text"
+                    name="job_title"
+                    required
+                    value={formData.job_title}
+                    onChange={(e) => setFormData({...formData, job_title: e.target.value})}
+                    className="w-full p-3 bg-brand-950 border border-brand-700 rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber"
+                    placeholder="Ex: Développeur Odoo Senior"
+                  />
+                </div>
 
-            <div>
-              <label className="block text-sm font-bold mb-2 text-brand-50">Téléphone</label>
-              <input
-                type="tel"
-                name="phone"
-                value={formData.phone}
-                onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                className="w-full p-3 bg-brand-950 border border-brand-700 rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber"
-                placeholder="+33 6 12 34 56 78"
-              />
-            </div>
+                <div>
+                  <label className="block text-sm font-bold mb-2 text-brand-50">Séniorité recherchée *</label>
+                  <select
+                    name="seniority"
+                    required
+                    value={formData.seniority}
+                    onChange={(e) => setFormData({...formData, seniority: e.target.value})}
+                    className="w-full p-3 bg-brand-950 border border-brand-700 rounded-lg text-brand-50 focus:outline-none focus:border-brand-amber"
+                  >
+                    <option value="">Sélectionnez</option>
+                    <option value="Junior (0-2 ans)">Junior (0-2 ans)</option>
+                    <option value="Confirmé (2-5 ans)">Confirmé (2-5 ans)</option>
+                    <option value="Senior (5-10 ans)">Senior (5-10 ans)</option>
+                    <option value="Expert (10 ans et +)">Expert (10 ans et +)</option>
+                  </select>
+                </div>
 
-            <div>
-              <label className="block text-sm font-bold mb-2 text-brand-50">Décrivez vos besoins de recrutement *</label>
-              <textarea
-                name="needs"
-                required
-                value={formData.needs}
-                onChange={(e) => setFormData({...formData, needs: e.target.value})}
-                className="w-full p-3 bg-brand-950 border border-brand-700 rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber"
-                rows="6"
-                placeholder="Ex: Nous recherchons 2 développeurs Odoo seniors avec expérience en modules ventes/stocks pour un projet de 6 mois..."
-              />
+                <div>
+                  <label className="block text-sm font-bold mb-2 text-brand-50">Type de contrat *</label>
+                  <select
+                    name="contract_type"
+                    required
+                    value={formData.contract_type}
+                    onChange={(e) => setFormData({...formData, contract_type: e.target.value})}
+                    className="w-full p-3 bg-brand-950 border border-brand-700 rounded-lg text-brand-50 focus:outline-none focus:border-brand-amber"
+                  >
+                    <option value="">Sélectionnez</option>
+                    <option value="CDI">CDI</option>
+                    <option value="CDD">CDD</option>
+                    <option value="Freelance / Indépendant">Freelance / Indépendant</option>
+                    <option value="Intérim">Intérim</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-bold mb-2 text-brand-50">Pays du poste *</label>
+                  <select
+                    name="country"
+                    required
+                    value={formData.country}
+                    onChange={(e) => setFormData({...formData, country: e.target.value})}
+                    className="w-full p-3 bg-brand-950 border border-brand-700 rounded-lg text-brand-50 focus:outline-none focus:border-brand-amber"
+                  >
+                    <option value="">Sélectionnez</option>
+                    <option value="France">🇫🇷 France</option>
+                    <option value="Belgique">🇧🇪 Belgique</option>
+                    <option value="France et Belgique">🇫🇷 France et 🇧🇪 Belgique</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-bold mb-2 text-brand-50">Mode de travail</label>
+                  <select
+                    name="work_mode"
+                    value={formData.work_mode}
+                    onChange={(e) => setFormData({...formData, work_mode: e.target.value})}
+                    className="w-full p-3 bg-brand-950 border border-brand-700 rounded-lg text-brand-50 focus:outline-none focus:border-brand-amber"
+                  >
+                    <option value="">Sélectionnez</option>
+                    <option value="Présentiel">Présentiel</option>
+                    <option value="Hybride">Hybride</option>
+                    <option value="Télétravail complet">Télétravail complet</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-bold mb-2 text-brand-50">Fourchette de rémunération</label>
+                  <input
+                    type="text"
+                    name="budget"
+                    value={formData.budget}
+                    onChange={(e) => setFormData({...formData, budget: e.target.value})}
+                    className="w-full p-3 bg-brand-950 border border-brand-700 rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber"
+                    placeholder="Ex: 45-55k€ brut annuel"
+                  />
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label className="block text-sm font-bold mb-2 text-brand-50">Compétences / modules Odoo requis</label>
+                  <input
+                    type="text"
+                    name="odoo_skills"
+                    value={formData.odoo_skills}
+                    onChange={(e) => setFormData({...formData, odoo_skills: e.target.value})}
+                    className="w-full p-3 bg-brand-950 border border-brand-700 rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber"
+                    placeholder="Ex: Python, ventes/stocks, PostgreSQL"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-bold mb-2 text-brand-50">Date de démarrage souhaitée</label>
+                  <input
+                    type="text"
+                    name="start_date"
+                    value={formData.start_date}
+                    onChange={(e) => setFormData({...formData, start_date: e.target.value})}
+                    className="w-full p-3 bg-brand-950 border border-brand-700 rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber"
+                    placeholder="Ex: Dès que possible, Q1 2027..."
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-sm font-bold mb-2 text-brand-50">Décrivez votre besoin *</label>
+                <textarea
+                  name="needs"
+                  required
+                  value={formData.needs}
+                  onChange={(e) => setFormData({...formData, needs: e.target.value})}
+                  className="w-full p-3 bg-brand-950 border border-brand-700 rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber"
+                  rows="5"
+                  placeholder="Contexte du poste, périmètre, enjeux, contraintes particulières..."
+                />
+              </div>
             </div>
 
             <button
@@ -809,16 +953,28 @@ function ContactPage() {
               disabled={loading}
               className="w-full bg-brand-amber text-brand-950 py-3 rounded-lg font-bold hover:bg-brand-amber-light transition disabled:opacity-50"
             >
-              {loading ? '⏳ Envoi en cours...' : '✓ Envoyer ma demande'}
+              {loading ? '⏳ Envoi en cours...' : '✓ Envoyer mon brief de recrutement'}
             </button>
+
+            <p className="text-xs text-brand-50/40 text-center">
+              ✓ Vos informations restent confidentielles et ne sont utilisées que pour votre recherche
+            </p>
           </form>
         </div>
 
         {/* Infos & Avantages */}
         <div>
           <div className="bg-brand-900 border border-brand-700 rounded-lg p-8 mb-8">
-            <h3 className="text-2xl font-black text-brand-50 mb-6">Pourquoi choisir DooRecruit ?</h3>
+            <h3 className="text-2xl font-display font-bold text-brand-50 mb-6">Pourquoi choisir DooRecruit ?</h3>
             <div className="space-y-4">
+              <div className="flex gap-4">
+                <div className="text-2xl">🌍</div>
+                <div>
+                  <h4 className="font-bold text-brand-50">France & Belgique</h4>
+                  <p className="text-brand-50/60">Un vivier de talents actif dans les deux pays, sourcé et qualifié localement.</p>
+                </div>
+              </div>
+
               <div className="flex gap-4">
                 <div className="text-2xl">🎯</div>
                 <div>
@@ -831,7 +987,7 @@ function ContactPage() {
                 <div className="text-2xl">⚡</div>
                 <div>
                   <h4 className="font-bold text-brand-50">Processus Rapide</h4>
-                  <p className="text-brand-50/60">Mise en poste en 2-4 semaines en moyenne.</p>
+                  <p className="text-brand-50/60">Shortlist sous 24h, mise en poste en 2-4 semaines en moyenne.</p>
                 </div>
               </div>
 
@@ -846,7 +1002,7 @@ function ContactPage() {
               <div className="flex gap-4">
                 <div className="text-2xl">✅</div>
                 <div>
-                  <h4 className="font-bold text-brand-50">Guarantee Satisfaction</h4>
+                  <h4 className="font-bold text-brand-50">Garantie de Remplacement</h4>
                   <p className="text-brand-50/60">Si le candidat ne convient pas, nous en proposons un autre gratuitement.</p>
                 </div>
               </div>
@@ -854,7 +1010,7 @@ function ContactPage() {
           </div>
 
           <div className="bg-brand-800 border border-brand-amber rounded-lg p-8">
-            <h3 className="text-2xl font-black text-brand-50 mb-4">Informations de contact directes</h3>
+            <h3 className="text-2xl font-display font-bold text-brand-50 mb-4">Informations de contact directes</h3>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
                 <Mail size={20} className="mt-1 text-brand-amber" />
