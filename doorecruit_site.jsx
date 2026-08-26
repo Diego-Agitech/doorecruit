@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, Search, Briefcase, Users, BookOpen, ChevronRight, Star, ArrowRight, Mail, Phone, Linkedin } from 'lucide-react';
+import { Menu, X, Search, Briefcase, Users, BookOpen, ChevronRight, Star, ArrowRight, Mail, Phone, Linkedin, TrendingUp, Target, Lightbulb, Sparkles, Zap, Globe, Shield, CheckCircle2 } from 'lucide-react';
 
 export default function DooRecruit() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,8 +16,7 @@ export default function DooRecruit() {
       level: 'senior',
       salary: '50-65k€',
       modules: ['Python', 'PostgreSQL', 'Développement Backend'],
-      description: 'Nous recherchons un développeur Odoo expérimenté pour rejoindre notre équipe.',
-      image: '🏢'
+      description: 'Nous recherchons un développeur Odoo expérimenté pour rejoindre notre équipe.'
     },
     {
       id: 2,
@@ -27,8 +26,7 @@ export default function DooRecruit() {
       level: 'mid',
       salary: '40-55k€',
       modules: ['Ventes', 'Stocks', 'Comptabilité'],
-      description: 'Vous allez accompagner nos clients dans leurs projets de transformation Odoo.',
-      image: '💼'
+      description: 'Vous allez accompagner nos clients dans leurs projets de transformation Odoo.'
     },
     {
       id: 3,
@@ -38,8 +36,7 @@ export default function DooRecruit() {
       level: 'mid',
       salary: '45-60k€',
       modules: ['Gestion de projet', 'Agile', 'Relation client'],
-      description: 'Piloter des projets Odoo complets de la conception à la mise en production.',
-      image: '📊'
+      description: 'Piloter des projets Odoo complets de la conception à la mise en production.'
     },
     {
       id: 4,
@@ -49,8 +46,7 @@ export default function DooRecruit() {
       level: 'junior',
       salary: '28-35k€',
       modules: ['Python', 'Javascript', 'API'],
-      description: 'Débuter votre carrière dans un environnement dynamique et bienveillant.',
-      image: '🚀'
+      description: 'Débuter votre carrière dans un environnement dynamique et bienveillant.'
     },
     {
       id: 5,
@@ -60,8 +56,7 @@ export default function DooRecruit() {
       level: 'senior',
       salary: '55-70k€',
       modules: ['Intégrations API', 'Webhooks', 'Synchronisation données'],
-      description: 'Expertiser les intégrations complexes entre Odoo et systèmes tiers.',
-      image: '🔗'
+      description: 'Expertiser les intégrations complexes entre Odoo et systèmes tiers.'
     },
     {
       id: 6,
@@ -71,8 +66,7 @@ export default function DooRecruit() {
       level: 'junior',
       salary: '30-38k€',
       modules: ['Administration système', 'Utilisateurs', 'Maintenance'],
-      description: 'Gérer et maintenir l\'infrastructure Odoo de nos clients.',
-      image: '⚙️'
+      description: 'Gérer et maintenir l\'infrastructure Odoo de nos clients.'
     }
   ];
 
@@ -83,7 +77,7 @@ export default function DooRecruit() {
       date: '15 août 2026',
       category: 'Marché',
       excerpt: 'Découvrez les compétences les plus demandées et les salaires tendance.',
-      icon: '📈'
+      icon: TrendingUp
     },
     {
       id: 2,
@@ -91,7 +85,7 @@ export default function DooRecruit() {
       date: '12 août 2026',
       category: 'Carrière',
       excerpt: 'Roadmap pour évolver dans votre carrière technique Odoo.',
-      icon: '🎯'
+      icon: Target
     },
     {
       id: 3,
@@ -99,7 +93,7 @@ export default function DooRecruit() {
       date: '8 août 2026',
       category: 'Technique',
       excerpt: 'Aperçu des nouvelles features de la dernière version.',
-      icon: '🆕'
+      icon: Sparkles
     },
     {
       id: 4,
@@ -107,7 +101,7 @@ export default function DooRecruit() {
       date: '5 août 2026',
       category: 'Conseils',
       excerpt: 'Questions techniques, case studies, et conseils pratiques.',
-      icon: '💡'
+      icon: Lightbulb
     }
   ];
 
@@ -330,8 +324,35 @@ function HomePage({ setCurrentPage }) {
         </div>
       </section>
 
-      {/* Featured Jobs */}
+      {/* Notre approche */}
       <section className="py-16 px-4 bg-brand-900 border-y border-brand-700">
+        <div className="max-w-7xl mx-auto">
+          <p className="uppercase tracking-widest text-sm text-brand-amber font-bold mb-3 text-center">Méthodologie</p>
+          <h2 className="text-4xl font-display font-black text-center mb-12 text-brand-50">Notre approche</h2>
+          <div className="grid md:grid-cols-4 gap-8 mb-10">
+            {[
+              { number: '01', title: 'Brief & Cadrage', description: 'Compréhension du poste, de la culture et des enjeux techniques.' },
+              { number: '02', title: 'Sourcing Ciblé', description: 'Activation de notre réseau Odoo en France et en Belgique.' },
+              { number: '03', title: 'Pré-qualification', description: 'Entretiens techniques menés par des consultants spécialisés Odoo.' },
+              { number: '04', title: 'Shortlist Qualifiée', description: '3 à 5 profils validés, présentés sous 24 à 72h.' }
+            ].map((step) => (
+              <div key={step.number}>
+                <div className="text-3xl font-display font-black text-brand-amber mb-3">{step.number}</div>
+                <h3 className="text-lg font-bold text-brand-50 mb-2">{step.title}</h3>
+                <p className="text-brand-50/60 text-sm">{step.description}</p>
+              </div>
+            ))}
+          </div>
+          <div className="text-center">
+            <button onClick={() => setCurrentPage('approach')} className="border border-brand-50/30 text-brand-50 px-8 py-3 rounded-lg font-bold hover:border-brand-amber hover:text-brand-amber transition inline-flex items-center gap-2">
+              Découvrir notre méthodologie complète <ArrowRight size={20} />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Jobs */}
+      <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-display font-black mb-12 text-brand-50">Dernières opportunités</h2>
           <div className="grid md:grid-cols-2 gap-6 mb-8">
@@ -395,7 +416,9 @@ function JobsPage({ jobs, filterRole, filterLevel, setFilterRole, setFilterLevel
                 <h3 className="text-xl font-bold text-brand-50">{job.title}</h3>
                 <p className="text-brand-50/60">{job.sector} <span className="text-brand-50/30">· client confidentiel</span></p>
               </div>
-              <div className="text-3xl">{job.image}</div>
+              <div className="bg-brand-800 text-brand-amber p-2 rounded-lg shrink-0">
+                <Briefcase size={20} />
+              </div>
             </div>
             <p className="text-brand-50/70 mb-4">{job.description}</p>
             <div className="flex flex-wrap gap-2 mb-4">
@@ -426,7 +449,9 @@ function BlogPage({ articles }) {
       <div className="grid md:grid-cols-2 gap-8">
         {articles.map(article => (
           <div key={article.id} className="bg-brand-900 border border-brand-700 rounded-lg p-6 hover:border-brand-amber transition">
-            <div className="text-4xl mb-4">{article.icon}</div>
+            <div className="bg-brand-800 text-brand-amber w-10 h-10 rounded-lg flex items-center justify-center mb-4">
+              <article.icon size={20} />
+            </div>
             <div className="flex justify-between items-start mb-3">
               <span className="bg-brand-800 text-brand-amber-light text-xs px-3 py-1 rounded-full">{article.category}</span>
               <span className="text-brand-50/40 text-sm">{article.date}</span>
@@ -544,7 +569,7 @@ function TalentsPage() {
     return (
       <div className="max-w-4xl mx-auto px-4 py-12">
         <div className="bg-brand-900 border-2 border-brand-amber rounded-lg p-8 text-center">
-          <div className="text-5xl mb-4">✅</div>
+          <div className="text-brand-amber mb-4 flex justify-center"><CheckCircle2 size={56} /></div>
           <h2 className="text-3xl font-display font-black text-brand-amber mb-4">Candidature envoyée !</h2>
           <p className="text-brand-50/80 text-lg mb-4">
             Merci <strong>{formData.firstName}</strong>. Notre équipe va examiner votre profil et vous contactera dans les 48 heures avec les meilleures opportunités adaptées à vos compétences Odoo.
@@ -781,7 +806,7 @@ function TalentsPage() {
             disabled={loading}
             className="w-full bg-brand-amber text-brand-950 py-3 rounded-lg font-bold hover:bg-brand-amber-light transition disabled:opacity-50"
           >
-            {loading ? '⏳ Envoi...' : '✓ Envoyer ma candidature'}
+            {loading ? 'Envoi en cours...' : 'Envoyer ma candidature'}
           </button>
 
           <p className="text-xs text-brand-50/40 text-center">
@@ -895,10 +920,10 @@ function ApproachPage({ setCurrentPage }) {
   ];
 
   const commitments = [
-    { icon: '🔒', title: 'Confidentialité', description: 'Vos données et celles des candidats restent strictement confidentielles.' },
-    { icon: '🎯', title: 'Expertise sectorielle', description: 'Une équipe qui maîtrise l\'écosystème Odoo, pas un cabinet généraliste.' },
-    { icon: '⚡', title: 'Réactivité', description: 'Shortlist sous 24 à 72h, retours transparents à chaque étape.' },
-    { icon: '🌍', title: 'France & Belgique', description: 'Un vivier de talents actif et qualifié dans les deux pays.' }
+    { icon: Shield, title: 'Confidentialité', description: 'Vos données et celles des candidats restent strictement confidentielles.' },
+    { icon: Target, title: 'Expertise sectorielle', description: 'Une équipe qui maîtrise l\'écosystème Odoo, pas un cabinet généraliste.' },
+    { icon: Zap, title: 'Réactivité', description: 'Shortlist sous 24 à 72h, retours transparents à chaque étape.' },
+    { icon: Globe, title: 'France & Belgique', description: 'Un vivier de talents actif et qualifié dans les deux pays.' }
   ];
 
   return (
@@ -926,7 +951,9 @@ function ApproachPage({ setCurrentPage }) {
       <div className="grid md:grid-cols-2 gap-6 mb-16">
         {commitments.map((c) => (
           <div key={c.title} className="bg-brand-900 border border-brand-700 rounded-lg p-6 flex gap-4">
-            <div className="text-2xl">{c.icon}</div>
+            <div className="bg-brand-800 text-brand-amber w-10 h-10 rounded-lg flex items-center justify-center shrink-0">
+              <c.icon size={20} />
+            </div>
             <div>
               <h4 className="font-bold text-brand-50 mb-1">{c.title}</h4>
               <p className="text-brand-50/60 text-sm">{c.description}</p>
@@ -1055,7 +1082,7 @@ function ContactPage() {
     return (
       <div className="max-w-4xl mx-auto px-4 py-12">
         <div className="bg-brand-900 border-2 border-brand-amber rounded-lg p-8 text-center">
-          <div className="text-5xl mb-4">✅</div>
+          <div className="text-brand-amber mb-4 flex justify-center"><CheckCircle2 size={56} /></div>
           <h2 className="text-3xl font-display font-black text-brand-amber mb-4">Brief bien reçu !</h2>
           <p className="text-brand-50/80 text-lg mb-4">
             Merci. Un consultant DooRecruit spécialisé Odoo revient vers vous sous 24h avec une première shortlist de profils.
@@ -1343,7 +1370,7 @@ function ContactPage() {
             disabled={loading}
             className="w-full bg-brand-amber text-brand-950 py-3 rounded-lg font-bold hover:bg-brand-amber-light transition disabled:opacity-50"
           >
-            {loading ? '⏳ Envoi en cours...' : '✓ Envoyer mon brief de recrutement'}
+            {loading ? 'Envoi en cours...' : 'Envoyer mon brief de recrutement'}
           </button>
 
           <p className="text-xs text-brand-50/40 text-center">
@@ -1358,7 +1385,9 @@ function ContactPage() {
           <h3 className="text-xl font-display font-black text-brand-50 mb-6">Pourquoi choisir DooRecruit ?</h3>
           <div className="space-y-4">
             <div className="flex gap-4">
-              <div className="text-2xl">🌍</div>
+              <div className="bg-brand-800 text-brand-amber w-9 h-9 rounded-lg flex items-center justify-center shrink-0">
+                <Globe size={18} />
+              </div>
               <div>
                 <h4 className="font-bold text-brand-50">France & Belgique</h4>
                 <p className="text-brand-50/60 text-sm">Un vivier de talents actif dans les deux pays, sourcé et qualifié localement.</p>
@@ -1366,7 +1395,9 @@ function ContactPage() {
             </div>
 
             <div className="flex gap-4">
-              <div className="text-2xl">🎯</div>
+              <div className="bg-brand-800 text-brand-amber w-9 h-9 rounded-lg flex items-center justify-center shrink-0">
+                <Target size={18} />
+              </div>
               <div>
                 <h4 className="font-bold text-brand-50">Expertise Odoo</h4>
                 <p className="text-brand-50/60 text-sm">Notre équipe connaît parfaitement l'écosystème Odoo et les compétences requises.</p>
@@ -1374,7 +1405,9 @@ function ContactPage() {
             </div>
 
             <div className="flex gap-4">
-              <div className="text-2xl">⚡</div>
+              <div className="bg-brand-800 text-brand-amber w-9 h-9 rounded-lg flex items-center justify-center shrink-0">
+                <Zap size={18} />
+              </div>
               <div>
                 <h4 className="font-bold text-brand-50">Processus Rapide</h4>
                 <p className="text-brand-50/60 text-sm">Shortlist sous 24h, mise en poste en 2-4 semaines en moyenne.</p>
@@ -1382,7 +1415,9 @@ function ContactPage() {
             </div>
 
             <div className="flex gap-4">
-              <div className="text-2xl">✅</div>
+              <div className="bg-brand-800 text-brand-amber w-9 h-9 rounded-lg flex items-center justify-center shrink-0">
+                <CheckCircle2 size={18} />
+              </div>
               <div>
                 <h4 className="font-bold text-brand-50">Garantie de Remplacement</h4>
                 <p className="text-brand-50/60 text-sm">Si le candidat ne convient pas, nous en proposons un autre gratuitement.</p>
