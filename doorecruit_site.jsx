@@ -151,6 +151,8 @@ export default function DooRecruit() {
         return <TalentsPage />;
       case 'about':
         return <AboutPage testimonials={testimonials} setCurrentPage={setCurrentPage} />;
+      case 'approach':
+        return <ApproachPage setCurrentPage={setCurrentPage} />;
       case 'contact':
         return <ContactPage />;
       default:
@@ -175,8 +177,9 @@ export default function DooRecruit() {
               <button onClick={() => setCurrentPage('home')} className="text-brand-50/70 hover:text-brand-amber font-medium transition">Accueil</button>
               <button onClick={() => setCurrentPage('jobs')} className="text-brand-50/70 hover:text-brand-amber font-medium transition">Offres</button>
               <button onClick={() => setCurrentPage('blog')} className="text-brand-50/70 hover:text-brand-amber font-medium transition">Blog</button>
-              <button onClick={() => setCurrentPage('talents')} className="text-brand-50/70 hover:text-brand-amber font-medium transition">Je cherche un rôle</button>
-              <button onClick={() => setCurrentPage('contact')} className="text-brand-50/70 hover:text-brand-amber font-medium transition">Recruter un talent</button>
+              <button onClick={() => setCurrentPage('talents')} className="text-brand-50/70 hover:text-brand-amber font-medium transition">Candidats</button>
+              <button onClick={() => setCurrentPage('contact')} className="text-brand-50/70 hover:text-brand-amber font-medium transition">Entreprises</button>
+              <button onClick={() => setCurrentPage('approach')} className="text-brand-50/70 hover:text-brand-amber font-medium transition">Notre approche</button>
               <button onClick={() => setCurrentPage('about')} className="text-brand-50/70 hover:text-brand-amber font-medium transition">À propos</button>
             </div>
 
@@ -194,8 +197,9 @@ export default function DooRecruit() {
               <button onClick={() => { setCurrentPage('home'); setMenuOpen(false); }} className="block w-full text-left text-brand-50/70 hover:text-brand-amber font-medium py-2">Accueil</button>
               <button onClick={() => { setCurrentPage('jobs'); setMenuOpen(false); }} className="block w-full text-left text-brand-50/70 hover:text-brand-amber font-medium py-2">Offres</button>
               <button onClick={() => { setCurrentPage('blog'); setMenuOpen(false); }} className="block w-full text-left text-brand-50/70 hover:text-brand-amber font-medium py-2">Blog</button>
-              <button onClick={() => { setCurrentPage('talents'); setMenuOpen(false); }} className="block w-full text-left text-brand-50/70 hover:text-brand-amber font-medium py-2">Je cherche un rôle</button>
-              <button onClick={() => { setCurrentPage('contact'); setMenuOpen(false); }} className="block w-full text-left text-brand-50/70 hover:text-brand-amber font-medium py-2">Recruter un talent</button>
+              <button onClick={() => { setCurrentPage('talents'); setMenuOpen(false); }} className="block w-full text-left text-brand-50/70 hover:text-brand-amber font-medium py-2">Candidats</button>
+              <button onClick={() => { setCurrentPage('contact'); setMenuOpen(false); }} className="block w-full text-left text-brand-50/70 hover:text-brand-amber font-medium py-2">Entreprises</button>
+              <button onClick={() => { setCurrentPage('approach'); setMenuOpen(false); }} className="block w-full text-left text-brand-50/70 hover:text-brand-amber font-medium py-2">Notre approche</button>
               <button onClick={() => { setCurrentPage('about'); setMenuOpen(false); }} className="block w-full text-left text-brand-50/70 hover:text-brand-amber font-medium py-2">À propos</button>
             </div>
           </div>
@@ -229,6 +233,7 @@ export default function DooRecruit() {
               <div className="space-y-2">
                 <button onClick={() => setCurrentPage('talents')} className="text-brand-50/50 hover:text-brand-amber block">S'inscrire</button>
                 <button onClick={() => setCurrentPage('contact')} className="text-brand-50/50 hover:text-brand-amber block">Nous contacter</button>
+                <button onClick={() => setCurrentPage('approach')} className="text-brand-50/50 hover:text-brand-amber block">Notre approche</button>
                 <button onClick={() => setCurrentPage('about')} className="text-brand-50/50 hover:text-brand-amber block">À propos</button>
               </div>
             </div>
@@ -670,6 +675,97 @@ function AboutPage({ testimonials, setCurrentPage }) {
   );
 }
 
+function ApproachPage({ setCurrentPage }) {
+  const steps = [
+    {
+      number: '01',
+      title: 'Brief & Cadrage',
+      description: 'Un consultant échange avec vous pour comprendre le poste, la culture d\'entreprise, les enjeux techniques et le contexte du recrutement.'
+    },
+    {
+      number: '02',
+      title: 'Sourcing Ciblé',
+      description: 'Activation de notre réseau exclusif de talents Odoo, actifs et passifs, en France et en Belgique.'
+    },
+    {
+      number: '03',
+      title: 'Pré-qualification Technique',
+      description: 'Entretiens menés par des consultants qui maîtrisent Odoo : compétences techniques, séniorité, adéquation avec le besoin.'
+    },
+    {
+      number: '04',
+      title: 'Shortlist Qualifiée',
+      description: '3 à 5 profils validés vous sont présentés sous 24 à 72h, avec synthèse de compétences et disponibilité.'
+    },
+    {
+      number: '05',
+      title: 'Coordination des Entretiens',
+      description: 'Organisation logistique complète et retours structurés après chaque échange, côté entreprise comme côté candidat.'
+    },
+    {
+      number: '06',
+      title: 'Négociation & Offre',
+      description: 'Accompagnement jusqu\'à la signature : rémunération, conditions, date de démarrage.'
+    },
+    {
+      number: '07',
+      title: 'Suivi Post-Intégration',
+      description: 'Suivi à 30, 60 et 90 jours, avec garantie de remplacement si le candidat ne convient pas.'
+    }
+  ];
+
+  const commitments = [
+    { icon: '🔒', title: 'Confidentialité', description: 'Vos données et celles des candidats restent strictement confidentielles.' },
+    { icon: '🎯', title: 'Expertise sectorielle', description: 'Une équipe qui maîtrise l\'écosystème Odoo, pas un cabinet généraliste.' },
+    { icon: '⚡', title: 'Réactivité', description: 'Shortlist sous 24 à 72h, retours transparents à chaque étape.' },
+    { icon: '🌍', title: 'France & Belgique', description: 'Un vivier de talents actif et qualifié dans les deux pays.' }
+  ];
+
+  return (
+    <div className="max-w-5xl mx-auto px-4 py-12">
+      <p className="uppercase tracking-widest text-sm text-brand-amber font-bold mb-3">Méthodologie</p>
+      <h1 className="text-4xl font-display font-bold mb-4 text-brand-50">Notre approche</h1>
+      <p className="text-lg text-brand-50/60 mb-16 max-w-2xl">
+        Une méthodologie éprouvée, taillée pour l'écosystème Odoo. Du brief initial à l'intégration,
+        nous pilotons chaque étape du recrutement en France 🇫🇷 et en Belgique 🇧🇪.
+      </p>
+
+      <div className="space-y-8 mb-16">
+        {steps.map((step) => (
+          <div key={step.number} className="flex gap-6 items-start">
+            <div className="text-3xl font-display font-bold text-brand-amber shrink-0 w-16">{step.number}</div>
+            <div className="border-l border-brand-700 pl-6 pb-8 flex-1">
+              <h3 className="text-xl font-bold text-brand-50 mb-2">{step.title}</h3>
+              <p className="text-brand-50/60">{step.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <h2 className="text-2xl font-display font-bold mb-8 text-brand-50">Nos engagements</h2>
+      <div className="grid md:grid-cols-2 gap-6 mb-16">
+        {commitments.map((c) => (
+          <div key={c.title} className="bg-brand-900 border border-brand-700 rounded-lg p-6 flex gap-4">
+            <div className="text-2xl">{c.icon}</div>
+            <div>
+              <h4 className="font-bold text-brand-50 mb-1">{c.title}</h4>
+              <p className="text-brand-50/60 text-sm">{c.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="bg-brand-800 border border-brand-amber rounded-lg p-8 text-center">
+        <h2 className="text-2xl font-display font-bold mb-4 text-brand-50">Prêt à lancer votre recrutement ?</h2>
+        <p className="mb-6 text-brand-50/70">Décrivez votre besoin, notre équipe revient vers vous sous 24h.</p>
+        <button onClick={() => setCurrentPage('contact')} className="bg-brand-amber text-brand-950 px-8 py-3 rounded-lg font-bold hover:bg-brand-amber-light transition">
+          Recruter un talent
+        </button>
+      </div>
+    </div>
+  );
+}
+
 function ContactPage() {
   const [formData, setFormData] = useState({
     company_name: '',
@@ -831,7 +927,7 @@ function ContactPage() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-bold mb-2 text-brand-50">Séniorité recherchée *</label>
+                  <label className="block text-sm font-bold mb-2 text-brand-50">Années d'expérience Odoo recherchées *</label>
                   <select
                     name="seniority"
                     required
@@ -840,10 +936,11 @@ function ContactPage() {
                     className="w-full p-3 bg-brand-950 border border-brand-700 rounded-lg text-brand-50 focus:outline-none focus:border-brand-amber"
                   >
                     <option value="">Sélectionnez</option>
-                    <option value="Junior (0-2 ans)">Junior (0-2 ans)</option>
-                    <option value="Confirmé (2-5 ans)">Confirmé (2-5 ans)</option>
-                    <option value="Senior (5-10 ans)">Senior (5-10 ans)</option>
-                    <option value="Expert (10 ans et +)">Expert (10 ans et +)</option>
+                    <option value="Moins de 1 an">Moins de 1 an</option>
+                    <option value="1-2 ans">1-2 ans</option>
+                    <option value="2-5 ans">2-5 ans</option>
+                    <option value="5-10 ans">5-10 ans</option>
+                    <option value="Plus de 10 ans">Plus de 10 ans</option>
                   </select>
                 </div>
 
@@ -908,33 +1005,32 @@ function ContactPage() {
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <label className="block text-sm font-bold mb-2 text-brand-50">Compétences / modules Odoo requis</label>
-                  <input
-                    type="text"
-                    name="odoo_skills"
-                    value={formData.odoo_skills}
-                    onChange={(e) => setFormData({...formData, odoo_skills: e.target.value})}
-                    className="w-full p-3 bg-brand-950 border border-brand-700 rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber"
-                    placeholder="Ex: Python, ventes/stocks, PostgreSQL"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-bold mb-2 text-brand-50">Date de démarrage souhaitée</label>
-                  <input
-                    type="text"
-                    name="start_date"
-                    value={formData.start_date}
-                    onChange={(e) => setFormData({...formData, start_date: e.target.value})}
-                    className="w-full p-3 bg-brand-950 border border-brand-700 rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber"
-                    placeholder="Ex: Dès que possible, Q1 2027..."
-                  />
-                </div>
+              <div>
+                <label className="block text-sm font-bold mb-2 text-brand-50">Compétences Odoo requises *</label>
+                <textarea
+                  name="odoo_skills"
+                  required
+                  value={formData.odoo_skills}
+                  onChange={(e) => setFormData({...formData, odoo_skills: e.target.value})}
+                  className="w-full p-3 bg-brand-950 border border-brand-700 rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber"
+                  rows="4"
+                  placeholder="Ex: Développement backend (Python), modules ventes/stocks, PostgreSQL, API REST..."
+                />
               </div>
 
-              <div>
+              <div className="mt-6">
+                <label className="block text-sm font-bold mb-2 text-brand-50">Date de démarrage souhaitée</label>
+                <input
+                  type="text"
+                  name="start_date"
+                  value={formData.start_date}
+                  onChange={(e) => setFormData({...formData, start_date: e.target.value})}
+                  className="w-full p-3 bg-brand-950 border border-brand-700 rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber"
+                  placeholder="Ex: Dès que possible, Q1 2027..."
+                />
+              </div>
+
+              <div className="mt-6">
                 <label className="block text-sm font-bold mb-2 text-brand-50">Décrivez votre besoin *</label>
                 <textarea
                   name="needs"
