@@ -159,29 +159,29 @@ export default function DooRecruit() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-brand-950 text-brand-50">
       {/* Navigation */}
-      <nav className="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+      <nav className="bg-brand-900 border-b border-brand-700 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <button onClick={() => setCurrentPage('home')} className="flex items-center gap-2">
-              <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                DooRecruit
+            <button onClick={() => setCurrentPage('home')} className="flex items-center gap-3">
+              <div className="text-2xl font-black tracking-tight text-brand-50">
+                DOO<span className="text-brand-amber">RECRUIT</span>
               </div>
             </button>
 
             {/* Desktop Menu */}
             <div className="hidden md:flex gap-8">
-              <button onClick={() => setCurrentPage('home')} className="text-gray-600 hover:text-blue-600 font-medium">Accueil</button>
-              <button onClick={() => setCurrentPage('jobs')} className="text-gray-600 hover:text-blue-600 font-medium">Offres</button>
-              <button onClick={() => setCurrentPage('blog')} className="text-gray-600 hover:text-blue-600 font-medium">Blog</button>
-              <button onClick={() => setCurrentPage('talents')} className="text-gray-600 hover:text-blue-600 font-medium">Je cherche un rôle</button>
-              <button onClick={() => setCurrentPage('contact')} className="text-gray-600 hover:text-blue-600 font-medium">Contact</button>
-              <button onClick={() => setCurrentPage('about')} className="text-gray-600 hover:text-blue-600 font-medium">À propos</button>
+              <button onClick={() => setCurrentPage('home')} className="text-brand-50/70 hover:text-brand-amber font-medium transition">Accueil</button>
+              <button onClick={() => setCurrentPage('jobs')} className="text-brand-50/70 hover:text-brand-amber font-medium transition">Offres</button>
+              <button onClick={() => setCurrentPage('blog')} className="text-brand-50/70 hover:text-brand-amber font-medium transition">Blog</button>
+              <button onClick={() => setCurrentPage('talents')} className="text-brand-50/70 hover:text-brand-amber font-medium transition">Je cherche un rôle</button>
+              <button onClick={() => setCurrentPage('contact')} className="text-brand-50/70 hover:text-brand-amber font-medium transition">Contact</button>
+              <button onClick={() => setCurrentPage('about')} className="text-brand-50/70 hover:text-brand-amber font-medium transition">À propos</button>
             </div>
 
             {/* Mobile Menu Button */}
-            <button onClick={() => setMenuOpen(!menuOpen)} className="md:hidden">
+            <button onClick={() => setMenuOpen(!menuOpen)} className="md:hidden text-brand-50">
               {menuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
@@ -189,14 +189,14 @@ export default function DooRecruit() {
 
         {/* Mobile Menu */}
         {menuOpen && (
-          <div className="md:hidden bg-white border-t border-gray-200">
+          <div className="md:hidden bg-brand-900 border-t border-brand-700">
             <div className="px-4 py-4 space-y-3">
-              <button onClick={() => { setCurrentPage('home'); setMenuOpen(false); }} className="block w-full text-left text-gray-600 hover:text-blue-600 font-medium py-2">Accueil</button>
-              <button onClick={() => { setCurrentPage('jobs'); setMenuOpen(false); }} className="block w-full text-left text-gray-600 hover:text-blue-600 font-medium py-2">Offres</button>
-              <button onClick={() => { setCurrentPage('blog'); setMenuOpen(false); }} className="block w-full text-left text-gray-600 hover:text-blue-600 font-medium py-2">Blog</button>
-              <button onClick={() => { setCurrentPage('talents'); setMenuOpen(false); }} className="block w-full text-left text-gray-600 hover:text-blue-600 font-medium py-2">Je cherche un rôle</button>
-              <button onClick={() => { setCurrentPage('contact'); setMenuOpen(false); }} className="block w-full text-left text-gray-600 hover:text-blue-600 font-medium py-2">Contact</button>
-              <button onClick={() => { setCurrentPage('about'); setMenuOpen(false); }} className="block w-full text-left text-gray-600 hover:text-blue-600 font-medium py-2">À propos</button>
+              <button onClick={() => { setCurrentPage('home'); setMenuOpen(false); }} className="block w-full text-left text-brand-50/70 hover:text-brand-amber font-medium py-2">Accueil</button>
+              <button onClick={() => { setCurrentPage('jobs'); setMenuOpen(false); }} className="block w-full text-left text-brand-50/70 hover:text-brand-amber font-medium py-2">Offres</button>
+              <button onClick={() => { setCurrentPage('blog'); setMenuOpen(false); }} className="block w-full text-left text-brand-50/70 hover:text-brand-amber font-medium py-2">Blog</button>
+              <button onClick={() => { setCurrentPage('talents'); setMenuOpen(false); }} className="block w-full text-left text-brand-50/70 hover:text-brand-amber font-medium py-2">Je cherche un rôle</button>
+              <button onClick={() => { setCurrentPage('contact'); setMenuOpen(false); }} className="block w-full text-left text-brand-50/70 hover:text-brand-amber font-medium py-2">Contact</button>
+              <button onClick={() => { setCurrentPage('about'); setMenuOpen(false); }} className="block w-full text-left text-brand-50/70 hover:text-brand-amber font-medium py-2">À propos</button>
             </div>
           </div>
         )}
@@ -206,32 +206,34 @@ export default function DooRecruit() {
       {renderPage()}
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white mt-20">
+      <footer className="bg-brand-950 border-t border-brand-700 mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <div className="text-2xl font-bold mb-4">DooRecruit</div>
-              <p className="text-gray-400">Votre expert en recrutement Odoo</p>
+              <div className="text-xl font-black mb-3">
+                DOO<span className="text-brand-amber">RECRUIT</span>
+              </div>
+              <p className="text-brand-50/50">Le match juste. Sans blabla.</p>
             </div>
             <div>
-              <h4 className="font-bold mb-4">Navigation</h4>
+              <h4 className="font-bold mb-4 text-brand-50">Navigation</h4>
               <div className="space-y-2">
-                <button onClick={() => setCurrentPage('home')} className="text-gray-400 hover:text-white block">Accueil</button>
-                <button onClick={() => setCurrentPage('jobs')} className="text-gray-400 hover:text-white block">Offres</button>
-                <button onClick={() => setCurrentPage('blog')} className="text-gray-400 hover:text-white block">Blog</button>
+                <button onClick={() => setCurrentPage('home')} className="text-brand-50/50 hover:text-brand-amber block">Accueil</button>
+                <button onClick={() => setCurrentPage('jobs')} className="text-brand-50/50 hover:text-brand-amber block">Offres</button>
+                <button onClick={() => setCurrentPage('blog')} className="text-brand-50/50 hover:text-brand-amber block">Blog</button>
               </div>
             </div>
             <div>
-              <h4 className="font-bold mb-4">Ressources</h4>
+              <h4 className="font-bold mb-4 text-brand-50">Ressources</h4>
               <div className="space-y-2">
-                <button onClick={() => setCurrentPage('talents')} className="text-gray-400 hover:text-white block">S'inscrire</button>
-                <button onClick={() => setCurrentPage('contact')} className="text-gray-400 hover:text-white block">Nous contacter</button>
-                <button onClick={() => setCurrentPage('about')} className="text-gray-400 hover:text-white block">À propos</button>
+                <button onClick={() => setCurrentPage('talents')} className="text-brand-50/50 hover:text-brand-amber block">S'inscrire</button>
+                <button onClick={() => setCurrentPage('contact')} className="text-brand-50/50 hover:text-brand-amber block">Nous contacter</button>
+                <button onClick={() => setCurrentPage('about')} className="text-brand-50/50 hover:text-brand-amber block">À propos</button>
               </div>
             </div>
             <div>
-              <h4 className="font-bold mb-4">Contact</h4>
-              <div className="space-y-2 text-gray-400">
+              <h4 className="font-bold mb-4 text-brand-50">Contact</h4>
+              <div className="space-y-2 text-brand-50/50">
                 <div className="flex items-center gap-2">
                   <Mail size={16} />
                   <span>hello@doorecruit.com</span>
@@ -243,7 +245,7 @@ export default function DooRecruit() {
               </div>
             </div>
           </div>
-          <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
+          <div className="border-t border-brand-700 pt-8 text-center text-brand-50/40">
             <p>&copy; 2026 DooRecruit. Tous droits réservés.</p>
           </div>
         </div>
@@ -256,19 +258,20 @@ function HomePage({ setCurrentPage }) {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20 px-4">
+      <section className="bg-brand-950 py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <p className="uppercase tracking-widest text-sm text-brand-amber font-bold mb-4">Le match juste. Sans blabla.</p>
+          <h1 className="text-5xl md:text-6xl font-black mb-6 text-brand-50">
             Recrutez les meilleurs talents Odoo
           </h1>
-          <p className="text-xl md:text-2xl mb-8 text-blue-100">
+          <p className="text-xl md:text-2xl mb-8 text-brand-50/60">
             L'agence spécialisée qui connecte les entreprises aux experts Odoo
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
-            <button onClick={() => setCurrentPage('jobs')} className="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 flex items-center justify-center gap-2">
+            <button onClick={() => setCurrentPage('jobs')} className="bg-brand-amber text-brand-950 px-8 py-3 rounded-lg font-bold hover:bg-brand-amber-light transition flex items-center justify-center gap-2">
               Découvrir les offres <ArrowRight size={20} />
             </button>
-            <button onClick={() => setCurrentPage('talents')} className="bg-blue-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700 flex items-center justify-center gap-2">
+            <button onClick={() => setCurrentPage('talents')} className="border border-brand-50/30 text-brand-50 px-8 py-3 rounded-lg font-bold hover:border-brand-amber hover:text-brand-amber transition flex items-center justify-center gap-2">
               Je cherche un rôle <ArrowRight size={20} />
             </button>
           </div>
@@ -276,20 +279,20 @@ function HomePage({ setCurrentPage }) {
       </section>
 
       {/* Stats */}
-      <section className="py-16 px-4 bg-gray-50">
+      <section className="py-16 px-4 bg-brand-900 border-y border-brand-700">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2">500+</div>
-              <p className="text-gray-600">Talents Odoo dans notre réseau</p>
+              <div className="text-4xl font-black text-brand-amber mb-2">500+</div>
+              <p className="text-brand-50/60">Talents Odoo dans notre réseau</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-purple-600 mb-2">120+</div>
-              <p className="text-gray-600">Placements réussis</p>
+              <div className="text-4xl font-black text-brand-amber mb-2">120+</div>
+              <p className="text-brand-50/60">Placements réussis</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2">95%</div>
-              <p className="text-gray-600">Taux de satisfaction</p>
+              <div className="text-4xl font-black text-brand-amber mb-2">95%</div>
+              <p className="text-brand-50/60">Taux de satisfaction</p>
             </div>
           </div>
         </div>
@@ -298,7 +301,7 @@ function HomePage({ setCurrentPage }) {
       {/* Services */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12">Nos Services</h2>
+          <h2 className="text-4xl font-black text-center mb-12 text-brand-50">Nos Services</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <ServiceCard
               icon={<Search size={32} />}
@@ -320,9 +323,9 @@ function HomePage({ setCurrentPage }) {
       </section>
 
       {/* Featured Jobs */}
-      <section className="py-16 px-4 bg-gray-50">
+      <section className="py-16 px-4 bg-brand-900 border-y border-brand-700">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12">Dernières opportunités</h2>
+          <h2 className="text-4xl font-black mb-12 text-brand-50">Dernières opportunités</h2>
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             {[0,1,2,3].map((i) => (
               <JobCard key={i} job={{
@@ -334,7 +337,7 @@ function HomePage({ setCurrentPage }) {
             ))}
           </div>
           <div className="text-center">
-            <button onClick={() => setCurrentPage('jobs')} className="bg-blue-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700">
+            <button onClick={() => setCurrentPage('jobs')} className="bg-brand-amber text-brand-950 px-8 py-3 rounded-lg font-bold hover:bg-brand-amber-light transition">
               Voir toutes les offres
             </button>
           </div>
@@ -342,11 +345,11 @@ function HomePage({ setCurrentPage }) {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-12 px-4">
+      <section className="py-12 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Prêt à trouver votre prochain talent Odoo ?</h2>
-          <p className="text-xl mb-8">Contactez-nous pour discuter de vos besoins de recrutement.</p>
-          <button onClick={() => setCurrentPage('contact')} className="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100">
+          <h2 className="text-3xl font-black mb-6 text-brand-50">Prêt à trouver votre prochain talent Odoo ?</h2>
+          <p className="text-xl mb-8 text-brand-50/60">Contactez-nous pour discuter de vos besoins de recrutement.</p>
+          <button onClick={() => setCurrentPage('contact')} className="bg-brand-amber text-brand-950 px-8 py-3 rounded-lg font-bold hover:bg-brand-amber-light transition">
             Nous contacter
           </button>
         </div>
@@ -358,14 +361,14 @@ function HomePage({ setCurrentPage }) {
 function JobsPage({ jobs, filterRole, filterLevel, setFilterRole, setFilterLevel }) {
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-8">Offres d'emploi</h1>
+      <h1 className="text-4xl font-black mb-8 text-brand-50">Offres d'emploi</h1>
 
       {/* Filters */}
-      <div className="bg-gray-50 p-6 rounded-lg mb-8">
+      <div className="bg-brand-900 border border-brand-700 p-6 rounded-lg mb-8">
         <div className="grid md:grid-cols-3 gap-4">
           <div>
-            <label className="block text-sm font-bold mb-2">Niveau</label>
-            <select value={filterLevel} onChange={(e) => setFilterLevel(e.target.value)} className="w-full p-2 border border-gray-300 rounded">
+            <label className="block text-sm font-bold mb-2 text-brand-50">Niveau</label>
+            <select value={filterLevel} onChange={(e) => setFilterLevel(e.target.value)} className="w-full p-2 bg-brand-950 border border-brand-700 rounded text-brand-50 focus:outline-none focus:border-brand-amber">
               <option value="all">Tous les niveaux</option>
               <option value="junior">Junior</option>
               <option value="mid">Intermédiaire</option>
@@ -378,27 +381,27 @@ function JobsPage({ jobs, filterRole, filterLevel, setFilterRole, setFilterLevel
       {/* Jobs Grid */}
       <div className="grid md:grid-cols-2 gap-6">
         {jobs.map(job => (
-          <div key={job.id} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition">
+          <div key={job.id} className="bg-brand-900 border border-brand-700 rounded-lg p-6 hover:border-brand-amber transition">
             <div className="flex justify-between items-start mb-4">
               <div>
-                <h3 className="text-xl font-bold text-gray-900">{job.title}</h3>
-                <p className="text-gray-600">{job.company}</p>
+                <h3 className="text-xl font-bold text-brand-50">{job.title}</h3>
+                <p className="text-brand-50/60">{job.company}</p>
               </div>
               <div className="text-3xl">{job.image}</div>
             </div>
-            <p className="text-gray-700 mb-4">{job.description}</p>
+            <p className="text-brand-50/70 mb-4">{job.description}</p>
             <div className="flex flex-wrap gap-2 mb-4">
               {job.modules.slice(0, 2).map((module, i) => (
-                <span key={i} className="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">
+                <span key={i} className="bg-brand-800 text-brand-amber-light text-xs px-3 py-1 rounded-full">
                   {module}
                 </span>
               ))}
             </div>
-            <div className="flex justify-between items-center text-sm text-gray-600">
+            <div className="flex justify-between items-center text-sm text-brand-50/60">
               <span>{job.location}</span>
-              <span className="font-bold text-gray-900">{job.salary}</span>
+              <span className="font-bold text-brand-amber">{job.salary}</span>
             </div>
-            <button className="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 font-bold">
+            <button className="mt-4 w-full bg-brand-amber text-brand-950 py-2 rounded-lg hover:bg-brand-amber-light font-bold transition">
               Postuler →
             </button>
           </div>
@@ -411,18 +414,18 @@ function JobsPage({ jobs, filterRole, filterLevel, setFilterRole, setFilterLevel
 function BlogPage({ articles }) {
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-12">Blog & Ressources Odoo</h1>
+      <h1 className="text-4xl font-black mb-12 text-brand-50">Blog & Ressources Odoo</h1>
       <div className="grid md:grid-cols-2 gap-8">
         {articles.map(article => (
-          <div key={article.id} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition">
+          <div key={article.id} className="bg-brand-900 border border-brand-700 rounded-lg p-6 hover:border-brand-amber transition">
             <div className="text-4xl mb-4">{article.icon}</div>
             <div className="flex justify-between items-start mb-3">
-              <span className="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">{article.category}</span>
-              <span className="text-gray-500 text-sm">{article.date}</span>
+              <span className="bg-brand-800 text-brand-amber-light text-xs px-3 py-1 rounded-full">{article.category}</span>
+              <span className="text-brand-50/40 text-sm">{article.date}</span>
             </div>
-            <h3 className="text-xl font-bold mb-3">{article.title}</h3>
-            <p className="text-gray-600 mb-4">{article.excerpt}</p>
-            <button className="text-blue-600 font-bold hover:text-blue-800 flex items-center gap-2">
+            <h3 className="text-xl font-bold mb-3 text-brand-50">{article.title}</h3>
+            <p className="text-brand-50/60 mb-4">{article.excerpt}</p>
+            <button className="text-brand-amber font-bold hover:text-brand-amber-light flex items-center gap-2">
               Lire l'article <ChevronRight size={16} />
             </button>
           </div>
@@ -484,14 +487,14 @@ function TalentsPage() {
   if (submitted) {
     return (
       <div className="max-w-4xl mx-auto px-4 py-12">
-        <div className="bg-green-50 border-2 border-green-200 rounded-lg p-8 text-center">
+        <div className="bg-brand-900 border-2 border-brand-amber rounded-lg p-8 text-center">
           <div className="text-5xl mb-4">✅</div>
-          <h2 className="text-3xl font-bold text-green-800 mb-4">Inscription réussie !</h2>
-          <p className="text-green-700 text-lg mb-4">
+          <h2 className="text-3xl font-black text-brand-amber mb-4">Inscription réussie !</h2>
+          <p className="text-brand-50/80 text-lg mb-4">
             Merci de votre inscription. Notre équipe va examiner votre profil et vous contactera dans les 48 heures avec les meilleures opportunités adaptées à vos compétences.
           </p>
-          <p className="text-green-600">
-            En attendant, consultez notre <button onClick={() => window.location.reload()} className="text-green-700 underline font-bold">blog</button> pour les dernières tendances Odoo.
+          <p className="text-brand-50/60">
+            En attendant, consultez notre <button onClick={() => window.location.reload()} className="text-brand-amber underline font-bold">blog</button> pour les dernières tendances Odoo.
           </p>
         </div>
       </div>
@@ -500,97 +503,97 @@ function TalentsPage() {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-2">Rejoignez notre base de talents</h1>
-      <p className="text-lg text-gray-600 mb-2">Enregistrez votre profil et découvrez les meilleures opportunités Odoo.</p>
-      <p className="text-gray-500 mb-8">⏱️ 5 minutes pour vous inscrire • 📧 Nous vous contacterons rapidement avec les bonnes offres</p>
+      <h1 className="text-4xl font-black mb-2 text-brand-50">Rejoignez notre base de talents</h1>
+      <p className="text-lg text-brand-50/60 mb-2">Enregistrez votre profil et découvrez les meilleures opportunités Odoo.</p>
+      <p className="text-brand-50/40 mb-8">⏱️ 5 minutes pour vous inscrire • 📧 Nous vous contacterons rapidement avec les bonnes offres</p>
 
-      <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-lg">
+      <div className="bg-brand-900 border border-brand-700 rounded-lg p-8">
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <label className="block text-sm font-bold mb-2">Nom complet *</label>
+              <label className="block text-sm font-bold mb-2 text-brand-50">Nom complet *</label>
               <input
                 type="text"
                 name="name"
                 required
                 value={formData.name}
                 onChange={(e) => setFormData({...formData, name: e.target.value})}
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                className="w-full p-3 bg-brand-950 border border-brand-700 rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber"
                 placeholder="Jean Dupont"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-bold mb-2">Email *</label>
+              <label className="block text-sm font-bold mb-2 text-brand-50">Email *</label>
               <input
                 type="email"
                 name="email"
                 required
                 value={formData.email}
                 onChange={(e) => setFormData({...formData, email: e.target.value})}
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                className="w-full p-3 bg-brand-950 border border-brand-700 rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber"
                 placeholder="jean@example.com"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-bold mb-2">Téléphone</label>
+              <label className="block text-sm font-bold mb-2 text-brand-50">Téléphone</label>
               <input
                 type="tel"
                 name="phone"
                 value={formData.phone}
                 onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                className="w-full p-3 bg-brand-950 border border-brand-700 rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber"
                 placeholder="+33 6 12 34 56 78"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-bold mb-2">Localisation</label>
+              <label className="block text-sm font-bold mb-2 text-brand-50">Localisation</label>
               <input
                 type="text"
                 name="location"
                 value={formData.location}
                 onChange={(e) => setFormData({...formData, location: e.target.value})}
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                className="w-full p-3 bg-brand-950 border border-brand-700 rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber"
                 placeholder="Paris, Île-de-France"
               />
             </div>
           </div>
 
           <div>
-            <label className="block text-sm font-bold mb-2">Profil LinkedIn</label>
+            <label className="block text-sm font-bold mb-2 text-brand-50">Profil LinkedIn</label>
             <input
               type="url"
               name="linkedin"
               value={formData.linkedin}
               onChange={(e) => setFormData({...formData, linkedin: e.target.value})}
-              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+              className="w-full p-3 bg-brand-950 border border-brand-700 rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber"
               placeholder="https://linkedin.com/in/jeandupont"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-bold mb-2">Vos compétences Odoo *</label>
+            <label className="block text-sm font-bold mb-2 text-brand-50">Vos compétences Odoo *</label>
             <textarea
               name="skills"
               required
               value={formData.skills}
               onChange={(e) => setFormData({...formData, skills: e.target.value})}
-              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+              className="w-full p-3 bg-brand-950 border border-brand-700 rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber"
               rows="4"
               placeholder="Ex: Développement backend (Python), modules ventes/stocks, PostgreSQL, API REST..."
             />
           </div>
 
           <div>
-            <label className="block text-sm font-bold mb-2">Années d'expérience Odoo *</label>
+            <label className="block text-sm font-bold mb-2 text-brand-50">Années d'expérience Odoo *</label>
             <select
               name="experience"
               required
               value={formData.experience}
               onChange={(e) => setFormData({...formData, experience: e.target.value})}
-              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+              className="w-full p-3 bg-brand-950 border border-brand-700 rounded-lg text-brand-50 focus:outline-none focus:border-brand-amber"
             >
               <option value="">Sélectionnez votre niveau</option>
               <option value="Moins de 1 an">Moins de 1 an</option>
@@ -604,12 +607,12 @@ function TalentsPage() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-bold hover:shadow-lg transition disabled:opacity-50"
+            className="w-full bg-brand-amber text-brand-950 py-3 rounded-lg font-bold hover:bg-brand-amber-light transition disabled:opacity-50"
           >
             {loading ? '⏳ Envoi en cours...' : '✓ S\'inscrire à notre talent pool'}
           </button>
 
-          <p className="text-xs text-gray-500 text-center">
+          <p className="text-xs text-brand-50/40 text-center">
             ✓ Vos données sont sécurisées et ne seront jamais partagées sans votre consentement
           </p>
         </form>
@@ -621,43 +624,43 @@ function TalentsPage() {
 function AboutPage({ testimonials, setCurrentPage }) {
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-8">À propos de DooRecruit</h1>
+      <h1 className="text-4xl font-black mb-8 text-brand-50">À propos de DooRecruit</h1>
 
-      <div className="bg-gray-50 p-8 rounded-lg mb-12">
-        <h2 className="text-2xl font-bold mb-4">Notre mission</h2>
-        <p className="text-gray-700 text-lg mb-4">
+      <div className="bg-brand-900 border border-brand-700 p-8 rounded-lg mb-12">
+        <h2 className="text-2xl font-bold mb-4 text-brand-50">Notre mission</h2>
+        <p className="text-brand-50/70 text-lg mb-4">
           Chez DooRecruit, nous croyons que le recrutement Odoo mérite une expertise spécialisée.
           Notre mission est de connecter les meilleurs talents Odoo avec les entreprises qui les cherchent,
           en créant des matches authentiques et durables.
         </p>
-        <p className="text-gray-700 text-lg">
+        <p className="text-brand-50/70 text-lg">
           Nous comprenons la complexité de recruter pour l'écosystème Odoo - c'est pourquoi notre équipe
           possède une expertise technique approfondie combinée à un vrai talent pour identifier les candidats idéaux.
         </p>
       </div>
 
-      <h2 className="text-3xl font-bold mb-8">Témoignages</h2>
+      <h2 className="text-3xl font-black mb-8 text-brand-50">Témoignages</h2>
       <div className="grid md:grid-cols-3 gap-8 mb-12">
         {testimonials.map((testimonial, i) => (
-          <div key={i} className="bg-white border border-gray-200 rounded-lg p-6">
+          <div key={i} className="bg-brand-900 border border-brand-700 rounded-lg p-6">
             <div className="flex gap-1 mb-4">
               {[...Array(testimonial.rating)].map((_, i) => (
-                <Star key={i} size={16} fill="gold" color="gold" />
+                <Star key={i} size={16} fill="#DFA33A" color="#DFA33A" />
               ))}
             </div>
-            <p className="text-gray-700 mb-4 italic">"{testimonial.text}"</p>
+            <p className="text-brand-50/70 mb-4 italic">"{testimonial.text}"</p>
             <div>
-              <p className="font-bold">{testimonial.name}</p>
-              <p className="text-sm text-gray-600">{testimonial.role} @ {testimonial.company}</p>
+              <p className="font-bold text-brand-50">{testimonial.name}</p>
+              <p className="text-sm text-brand-50/50">{testimonial.role} @ {testimonial.company}</p>
             </div>
           </div>
         ))}
       </div>
 
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg p-8 text-center">
-        <h2 className="text-2xl font-bold mb-4">Vous cherchez à recruter?</h2>
-        <p className="mb-6">Contactez notre équipe pour discuter de vos besoins.</p>
-        <button onClick={() => setCurrentPage('contact')} className="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100">
+      <div className="bg-brand-800 border border-brand-amber rounded-lg p-8 text-center">
+        <h2 className="text-2xl font-black mb-4 text-brand-50">Vous cherchez à recruter?</h2>
+        <p className="mb-6 text-brand-50/70">Contactez notre équipe pour discuter de vos besoins.</p>
+        <button onClick={() => setCurrentPage('contact')} className="bg-brand-amber text-brand-950 px-8 py-3 rounded-lg font-bold hover:bg-brand-amber-light transition">
           Nous contacter
         </button>
       </div>
@@ -713,14 +716,14 @@ function ContactPage() {
   if (submitted) {
     return (
       <div className="max-w-4xl mx-auto px-4 py-12">
-        <div className="bg-green-50 border-2 border-green-200 rounded-lg p-8 text-center">
+        <div className="bg-brand-900 border-2 border-brand-amber rounded-lg p-8 text-center">
           <div className="text-5xl mb-4">✅</div>
-          <h2 className="text-3xl font-bold text-green-800 mb-4">Message reçu !</h2>
-          <p className="text-green-700 text-lg mb-4">
+          <h2 className="text-3xl font-black text-brand-amber mb-4">Message reçu !</h2>
+          <p className="text-brand-50/80 text-lg mb-4">
             Merci de nous avoir contactés. Notre équipe va examiner votre demande et vous répondra dans les 24 heures.
           </p>
-          <p className="text-green-600">
-            En attendant, découvrez nos <button onClick={() => window.scrollTo(0, 0)} className="text-green-700 underline font-bold">dernières offres</button> ou consultez notre blog.
+          <p className="text-brand-50/60">
+            En attendant, découvrez nos <button onClick={() => window.scrollTo(0, 0)} className="text-brand-amber underline font-bold">dernières offres</button> ou consultez notre blog.
           </p>
         </div>
       </div>
@@ -729,73 +732,73 @@ function ContactPage() {
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-2">Recrutez vos talents Odoo</h1>
-      <p className="text-lg text-gray-600 mb-12">Contactez notre équipe pour discuter de vos besoins de recrutement spécialisés Odoo.</p>
+      <h1 className="text-4xl font-black mb-2 text-brand-50">Recrutez vos talents Odoo</h1>
+      <p className="text-lg text-brand-50/60 mb-12">Contactez notre équipe pour discuter de vos besoins de recrutement spécialisés Odoo.</p>
 
       <div className="grid md:grid-cols-2 gap-12">
         {/* Formulaire */}
-        <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-lg">
-          <h2 className="text-2xl font-bold mb-6">Nous contacter</h2>
+        <div className="bg-brand-900 border border-brand-700 rounded-lg p-8">
+          <h2 className="text-2xl font-bold mb-6 text-brand-50">Nous contacter</h2>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label className="block text-sm font-bold mb-2">Nom de l'entreprise *</label>
+              <label className="block text-sm font-bold mb-2 text-brand-50">Nom de l'entreprise *</label>
               <input
                 type="text"
                 name="company_name"
                 required
                 value={formData.company_name}
                 onChange={(e) => setFormData({...formData, company_name: e.target.value})}
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                className="w-full p-3 bg-brand-950 border border-brand-700 rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber"
                 placeholder="Votre entreprise"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-bold mb-2">Votre nom *</label>
+              <label className="block text-sm font-bold mb-2 text-brand-50">Votre nom *</label>
               <input
                 type="text"
                 name="contact_name"
                 required
                 value={formData.contact_name}
                 onChange={(e) => setFormData({...formData, contact_name: e.target.value})}
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                className="w-full p-3 bg-brand-950 border border-brand-700 rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber"
                 placeholder="Votre nom"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-bold mb-2">Email *</label>
+              <label className="block text-sm font-bold mb-2 text-brand-50">Email *</label>
               <input
                 type="email"
                 name="email"
                 required
                 value={formData.email}
                 onChange={(e) => setFormData({...formData, email: e.target.value})}
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                className="w-full p-3 bg-brand-950 border border-brand-700 rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber"
                 placeholder="contact@entreprise.com"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-bold mb-2">Téléphone</label>
+              <label className="block text-sm font-bold mb-2 text-brand-50">Téléphone</label>
               <input
                 type="tel"
                 name="phone"
                 value={formData.phone}
                 onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                className="w-full p-3 bg-brand-950 border border-brand-700 rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber"
                 placeholder="+33 6 12 34 56 78"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-bold mb-2">Décrivez vos besoins de recrutement *</label>
+              <label className="block text-sm font-bold mb-2 text-brand-50">Décrivez vos besoins de recrutement *</label>
               <textarea
                 name="needs"
                 required
                 value={formData.needs}
                 onChange={(e) => setFormData({...formData, needs: e.target.value})}
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                className="w-full p-3 bg-brand-950 border border-brand-700 rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber"
                 rows="6"
                 placeholder="Ex: Nous recherchons 2 développeurs Odoo seniors avec expérience en modules ventes/stocks pour un projet de 6 mois..."
               />
@@ -804,7 +807,7 @@ function ContactPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-bold hover:shadow-lg transition disabled:opacity-50"
+              className="w-full bg-brand-amber text-brand-950 py-3 rounded-lg font-bold hover:bg-brand-amber-light transition disabled:opacity-50"
             >
               {loading ? '⏳ Envoi en cours...' : '✓ Envoyer ma demande'}
             </button>
@@ -813,65 +816,65 @@ function ContactPage() {
 
         {/* Infos & Avantages */}
         <div>
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-8 mb-8">
-            <h3 className="text-2xl font-bold text-blue-900 mb-6">Pourquoi choisir DooRecruit ?</h3>
+          <div className="bg-brand-900 border border-brand-700 rounded-lg p-8 mb-8">
+            <h3 className="text-2xl font-black text-brand-50 mb-6">Pourquoi choisir DooRecruit ?</h3>
             <div className="space-y-4">
               <div className="flex gap-4">
                 <div className="text-2xl">🎯</div>
                 <div>
-                  <h4 className="font-bold text-gray-900">Expertise Odoo</h4>
-                  <p className="text-gray-700">Notre équipe connaît parfaitement l'écosystème Odoo et les compétences requises.</p>
+                  <h4 className="font-bold text-brand-50">Expertise Odoo</h4>
+                  <p className="text-brand-50/60">Notre équipe connaît parfaitement l'écosystème Odoo et les compétences requises.</p>
                 </div>
               </div>
 
               <div className="flex gap-4">
                 <div className="text-2xl">⚡</div>
                 <div>
-                  <h4 className="font-bold text-gray-900">Processus Rapide</h4>
-                  <p className="text-gray-700">Mise en poste en 2-4 semaines en moyenne.</p>
+                  <h4 className="font-bold text-brand-50">Processus Rapide</h4>
+                  <p className="text-brand-50/60">Mise en poste en 2-4 semaines en moyenne.</p>
                 </div>
               </div>
 
               <div className="flex gap-4">
                 <div className="text-2xl">🔍</div>
                 <div>
-                  <h4 className="font-bold text-gray-900">Pré-sélection Technique</h4>
-                  <p className="text-gray-700">Nous vérifions les compétences techniques de chaque candidat.</p>
+                  <h4 className="font-bold text-brand-50">Pré-sélection Technique</h4>
+                  <p className="text-brand-50/60">Nous vérifions les compétences techniques de chaque candidat.</p>
                 </div>
               </div>
 
               <div className="flex gap-4">
                 <div className="text-2xl">✅</div>
                 <div>
-                  <h4 className="font-bold text-gray-900">Guarantee Satisfaction</h4>
-                  <p className="text-gray-700">Si le candidat ne convient pas, nous en proposons un autre gratuitement.</p>
+                  <h4 className="font-bold text-brand-50">Guarantee Satisfaction</h4>
+                  <p className="text-brand-50/60">Si le candidat ne convient pas, nous en proposons un autre gratuitement.</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-blue-600 to-purple-600 text-white rounded-lg p-8">
-            <h3 className="text-2xl font-bold mb-4">Informations de contact directes</h3>
+          <div className="bg-brand-800 border border-brand-amber rounded-lg p-8">
+            <h3 className="text-2xl font-black text-brand-50 mb-4">Informations de contact directes</h3>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
-                <Mail size={20} className="mt-1" />
+                <Mail size={20} className="mt-1 text-brand-amber" />
                 <div>
-                  <p className="font-bold">Email</p>
-                  <p>hello@doorecruit.com</p>
+                  <p className="font-bold text-brand-50">Email</p>
+                  <p className="text-brand-50/70">hello@doorecruit.com</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <Phone size={20} className="mt-1" />
+                <Phone size={20} className="mt-1 text-brand-amber" />
                 <div>
-                  <p className="font-bold">Téléphone</p>
-                  <p>+33 (0)1 23 45 67 89</p>
+                  <p className="font-bold text-brand-50">Téléphone</p>
+                  <p className="text-brand-50/70">+33 (0)1 23 45 67 89</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <Linkedin size={20} className="mt-1" />
+                <Linkedin size={20} className="mt-1 text-brand-amber" />
                 <div>
-                  <p className="font-bold">LinkedIn</p>
-                  <p>linkedin.com/company/doorecruit</p>
+                  <p className="font-bold text-brand-50">LinkedIn</p>
+                  <p className="text-brand-50/70">linkedin.com/company/doorecruit</p>
                 </div>
               </div>
             </div>
@@ -884,20 +887,20 @@ function ContactPage() {
 
 function ServiceCard({ icon, title, description }) {
   return (
-    <div className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition text-center">
-      <div className="text-blue-600 mb-4 flex justify-center">{icon}</div>
-      <h3 className="text-xl font-bold mb-3">{title}</h3>
-      <p className="text-gray-600">{description}</p>
+    <div className="bg-brand-900 border border-brand-700 rounded-lg p-8 hover:border-brand-amber transition text-center">
+      <div className="text-brand-amber mb-4 flex justify-center">{icon}</div>
+      <h3 className="text-xl font-bold mb-3 text-brand-50">{title}</h3>
+      <p className="text-brand-50/60">{description}</p>
     </div>
   );
 }
 
 function JobCard({ job }) {
   return (
-    <div className="bg-white rounded-lg p-6 border border-gray-200 hover:shadow-lg transition">
-      <h3 className="text-lg font-bold text-gray-900 mb-2">{job.title}</h3>
-      <p className="text-gray-600 mb-4">{job.company} • {job.location}</p>
-      <p className="text-xl font-bold text-blue-600">{job.salary}</p>
+    <div className="bg-brand-950 rounded-lg p-6 border border-brand-700 hover:border-brand-amber transition">
+      <h3 className="text-lg font-bold text-brand-50 mb-2">{job.title}</h3>
+      <p className="text-brand-50/60 mb-4">{job.company} • {job.location}</p>
+      <p className="text-xl font-bold text-brand-amber">{job.salary}</p>
     </div>
   );
 }
