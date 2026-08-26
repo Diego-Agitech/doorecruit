@@ -19,7 +19,7 @@ export default {
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
-        display: ['Space Grotesk', 'sans-serif'],
+        display: ['Archivo', 'sans-serif'],
       },
     },
   },

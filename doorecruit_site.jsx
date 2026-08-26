@@ -167,7 +167,7 @@ export default function DooRecruit() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <button onClick={() => setCurrentPage('home')} className="flex items-center gap-3">
-              <div className="text-2xl font-display font-bold tracking-tight text-brand-50">
+              <div className="text-2xl font-display font-black tracking-tight text-brand-50">
                 DOO<span className="text-brand-amber">RECRUIT</span>
               </div>
             </button>
@@ -214,7 +214,7 @@ export default function DooRecruit() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <div className="text-xl font-display font-bold mb-3">
+              <div className="text-xl font-display font-black mb-3">
                 DOO<span className="text-brand-amber">RECRUIT</span>
               </div>
               <p className="text-brand-50/50">Le match juste. Sans blabla.</p>
@@ -267,7 +267,7 @@ function HomePage({ setCurrentPage }) {
       <section className="bg-brand-950 py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <p className="uppercase tracking-widest text-sm text-brand-amber font-bold mb-4">Le match juste. Sans blabla.</p>
-          <h1 className="text-5xl md:text-6xl font-display font-bold mb-6 text-brand-50">
+          <h1 className="text-5xl md:text-6xl font-display font-black mb-6 text-brand-50">
             Recrutez les meilleurs talents Odoo
           </h1>
           <p className="text-xl md:text-2xl mb-3 text-brand-50/60">
@@ -290,15 +290,15 @@ function HomePage({ setCurrentPage }) {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-display font-bold text-brand-amber mb-2">500+</div>
+              <div className="text-4xl font-display font-black text-brand-amber mb-2">500+</div>
               <p className="text-brand-50/60">Talents Odoo dans notre réseau</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-display font-bold text-brand-amber mb-2">120+</div>
+              <div className="text-4xl font-display font-black text-brand-amber mb-2">120+</div>
               <p className="text-brand-50/60">Placements réussis</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-display font-bold text-brand-amber mb-2">95%</div>
+              <div className="text-4xl font-display font-black text-brand-amber mb-2">95%</div>
               <p className="text-brand-50/60">Taux de satisfaction</p>
             </div>
           </div>
@@ -308,7 +308,8 @@ function HomePage({ setCurrentPage }) {
       {/* Services */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-display font-bold text-center mb-12 text-brand-50">Nos Services</h2>
+          <h2 className="text-4xl font-display font-black text-center mb-3 text-brand-50">Nos Services</h2>
+          <p className="text-center text-brand-50/50 mb-12 max-w-2xl mx-auto">100% spécialisé Odoo — aucun autre ERP, aucune dispersion. Développement, fonctionnel, gestion de projet, intégration.</p>
           <div className="grid md:grid-cols-3 gap-8">
             <ServiceCard
               icon={<Search size={32} />}
@@ -332,7 +333,7 @@ function HomePage({ setCurrentPage }) {
       {/* Featured Jobs */}
       <section className="py-16 px-4 bg-brand-900 border-y border-brand-700">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-display font-bold mb-12 text-brand-50">Dernières opportunités</h2>
+          <h2 className="text-4xl font-display font-black mb-12 text-brand-50">Dernières opportunités</h2>
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             {[0,1,2,3].map((i) => (
               <JobCard key={i} job={{
@@ -354,7 +355,7 @@ function HomePage({ setCurrentPage }) {
       {/* CTA Section */}
       <section className="py-12 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-display font-bold mb-6 text-brand-50">Prêt à trouver votre prochain talent Odoo ?</h2>
+          <h2 className="text-3xl font-display font-black mb-6 text-brand-50">Prêt à trouver votre prochain talent Odoo ?</h2>
           <p className="text-xl mb-8 text-brand-50/60">Contactez-nous pour discuter de vos besoins de recrutement.</p>
           <button onClick={() => setCurrentPage('contact')} className="bg-brand-amber text-brand-950 px-8 py-3 rounded-lg font-bold hover:bg-brand-amber-light transition">
             Nous contacter
@@ -368,7 +369,7 @@ function HomePage({ setCurrentPage }) {
 function JobsPage({ jobs, filterRole, filterLevel, setFilterRole, setFilterLevel }) {
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-display font-bold mb-8 text-brand-50">Offres d'emploi</h1>
+      <h1 className="text-4xl font-display font-black mb-8 text-brand-50">Offres d'emploi</h1>
 
       {/* Filters */}
       <div className="bg-brand-900 border border-brand-700 p-6 rounded-lg mb-8">
@@ -421,7 +422,7 @@ function JobsPage({ jobs, filterRole, filterLevel, setFilterRole, setFilterLevel
 function BlogPage({ articles }) {
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-display font-bold mb-12 text-brand-50">Blog & Ressources Odoo</h1>
+      <h1 className="text-4xl font-display font-black mb-12 text-brand-50">Blog & Ressources Odoo</h1>
       <div className="grid md:grid-cols-2 gap-8">
         {articles.map(article => (
           <div key={article.id} className="bg-brand-900 border border-brand-700 rounded-lg p-6 hover:border-brand-amber transition">
@@ -444,19 +445,63 @@ function BlogPage({ articles }) {
 
 function TalentsPage() {
   const [formData, setFormData] = useState({
-    name: '',
+    firstName: '',
+    lastName: '',
     email: '',
     phone: '',
-    skills: '',
-    experience: '',
-    location: '',
-    linkedin: ''
+    country: '',
+    diploma: '',
+    field: '',
+    odooExperience: '',
+    odooCertified: '',
+    roles: [],
+    cvFileName: ''
   });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState({});
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+    if (errors[name]) setErrors({ ...errors, [name]: '' });
+  };
+
+  const handleRoleToggle = (role) => {
+    const updatedRoles = formData.roles.includes(role)
+      ? formData.roles.filter(r => r !== role)
+      : formData.roles.length < 2
+      ? [...formData.roles, role]
+      : formData.roles;
+    setFormData({ ...formData, roles: updatedRoles });
+  };
+
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    if (file) setFormData({ ...formData, cvFileName: file.name });
+  };
+
+  const validateForm = () => {
+    const newErrors = {};
+    if (!formData.firstName.trim()) newErrors.firstName = 'Prénom requis';
+    if (!formData.lastName.trim()) newErrors.lastName = 'Nom requis';
+    if (!formData.email.trim()) newErrors.email = 'Email requis';
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) newErrors.email = 'Email invalide';
+    if (!formData.phone.trim()) newErrors.phone = 'Téléphone requis';
+    if (!formData.country) newErrors.country = 'Pays requis';
+    if (!formData.diploma) newErrors.diploma = 'Requis';
+    if (!formData.field) newErrors.field = 'Requis';
+    if (!formData.odooExperience) newErrors.odooExperience = 'Requis';
+    if (!formData.odooCertified) newErrors.odooCertified = 'Requis';
+    if (formData.roles.length === 0) newErrors.roles = 'Sélectionnez au moins un rôle';
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!validateForm()) return;
     setLoading(true);
 
     try {
@@ -466,22 +511,26 @@ function TalentsPage() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          name: formData.name,
+          firstName: formData.firstName,
+          lastName: formData.lastName,
           email: formData.email,
           phone: formData.phone,
-          location: formData.location,
-          experience: formData.experience,
-          skills: formData.skills,
-          linkedin: formData.linkedin,
-          _subject: `Nouvelle inscription talent: ${formData.name}`,
+          country: formData.country,
+          diploma: formData.diploma,
+          field: formData.field,
+          odooExperience: formData.odooExperience,
+          odooCertified: formData.odooCertified,
+          roles: formData.roles.join(', '),
+          cvName: formData.cvFileName || 'Aucun CV',
+          _subject: `Nouvelle candidature Odoo: ${formData.firstName} ${formData.lastName} (${formData.country})`,
           _from: formData.email,
         })
       });
 
       if (response.ok) {
         setSubmitted(true);
-        setFormData({ name: '', email: '', phone: '', skills: '', experience: '', location: '', linkedin: '' });
-        setTimeout(() => setSubmitted(false), 5000);
+        setFormData({ firstName: '', lastName: '', email: '', phone: '', country: '', diploma: '', field: '', odooExperience: '', odooCertified: '', roles: [], cvFileName: '' });
+        setTimeout(() => setSubmitted(false), 8000);
       }
     } catch (error) {
       console.error('Erreur:', error);
@@ -496,9 +545,9 @@ function TalentsPage() {
       <div className="max-w-4xl mx-auto px-4 py-12">
         <div className="bg-brand-900 border-2 border-brand-amber rounded-lg p-8 text-center">
           <div className="text-5xl mb-4">✅</div>
-          <h2 className="text-3xl font-display font-bold text-brand-amber mb-4">Inscription réussie !</h2>
+          <h2 className="text-3xl font-display font-black text-brand-amber mb-4">Candidature envoyée !</h2>
           <p className="text-brand-50/80 text-lg mb-4">
-            Merci de votre inscription. Notre équipe va examiner votre profil et vous contactera dans les 48 heures avec les meilleures opportunités adaptées à vos compétences.
+            Merci <strong>{formData.firstName}</strong>. Notre équipe va examiner votre profil et vous contactera dans les 48 heures avec les meilleures opportunités adaptées à vos compétences Odoo.
           </p>
           <p className="text-brand-50/60">
             En attendant, consultez notre <button onClick={() => window.location.reload()} className="text-brand-amber underline font-bold">blog</button> pour les dernières tendances Odoo.
@@ -509,106 +558,222 @@ function TalentsPage() {
   }
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-display font-bold mb-2 text-brand-50">Rejoignez notre base de talents</h1>
+    <div className="max-w-3xl mx-auto px-4 py-12">
+      <p className="uppercase tracking-widest text-sm text-brand-amber font-bold mb-3">100% spécialisé Odoo</p>
+      <h1 className="text-4xl font-display font-black mb-2 text-brand-50">Rejoignez notre base de talents</h1>
       <p className="text-lg text-brand-50/60 mb-2">Enregistrez votre profil et découvrez les meilleures opportunités Odoo.</p>
-      <p className="text-brand-50/40 mb-8">⏱️ 5 minutes pour vous inscrire • 📧 Nous vous contacterons rapidement avec les bonnes offres</p>
+      <p className="text-brand-50/40 mb-8">🇫🇷 France • 🇧🇪 Belgique — ⏱️ 5 minutes pour vous inscrire</p>
 
       <div className="bg-brand-900 border border-brand-700 rounded-lg p-8">
         <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="grid md:grid-cols-2 gap-6">
-            <div>
-              <label className="block text-sm font-bold mb-2 text-brand-50">Nom complet *</label>
-              <input
-                type="text"
-                name="name"
-                required
-                value={formData.name}
-                onChange={(e) => setFormData({...formData, name: e.target.value})}
-                className="w-full p-3 bg-brand-950 border border-brand-700 rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber"
-                placeholder="Jean Dupont"
-              />
+
+          {/* Infos personnelles */}
+          <div>
+            <p className="text-xs uppercase tracking-widest text-brand-50/40 font-bold mb-4">Vos infos</p>
+
+            <div className="grid md:grid-cols-2 gap-4 mb-4">
+              <div>
+                <label className="block text-sm font-bold mb-1 text-brand-50">Prénom *</label>
+                <input
+                  type="text"
+                  name="firstName"
+                  value={formData.firstName}
+                  onChange={handleInputChange}
+                  className={`w-full p-3 bg-brand-950 border rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber ${errors.firstName ? 'border-red-500' : 'border-brand-700'}`}
+                  placeholder="Jean"
+                />
+                {errors.firstName && <p className="text-red-500 text-xs mt-1">{errors.firstName}</p>}
+              </div>
+              <div>
+                <label className="block text-sm font-bold mb-1 text-brand-50">Nom *</label>
+                <input
+                  type="text"
+                  name="lastName"
+                  value={formData.lastName}
+                  onChange={handleInputChange}
+                  className={`w-full p-3 bg-brand-950 border rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber ${errors.lastName ? 'border-red-500' : 'border-brand-700'}`}
+                  placeholder="Dupont"
+                />
+                {errors.lastName && <p className="text-red-500 text-xs mt-1">{errors.lastName}</p>}
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-4 mb-4">
+              <div>
+                <label className="block text-sm font-bold mb-1 text-brand-50">Email *</label>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  className={`w-full p-3 bg-brand-950 border rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber ${errors.email ? 'border-red-500' : 'border-brand-700'}`}
+                  placeholder="jean@example.com"
+                />
+                {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
+              </div>
+              <div>
+                <label className="block text-sm font-bold mb-1 text-brand-50">Téléphone *</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  className={`w-full p-3 bg-brand-950 border rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber ${errors.phone ? 'border-red-500' : 'border-brand-700'}`}
+                  placeholder="+33 6 12 34 56 78"
+                />
+                {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
+              </div>
             </div>
 
             <div>
-              <label className="block text-sm font-bold mb-2 text-brand-50">Email *</label>
-              <input
-                type="email"
-                name="email"
-                required
-                value={formData.email}
-                onChange={(e) => setFormData({...formData, email: e.target.value})}
-                className="w-full p-3 bg-brand-950 border border-brand-700 rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber"
-                placeholder="jean@example.com"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-bold mb-2 text-brand-50">Téléphone</label>
-              <input
-                type="tel"
-                name="phone"
-                value={formData.phone}
-                onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                className="w-full p-3 bg-brand-950 border border-brand-700 rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber"
-                placeholder="+33 6 12 34 56 78"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-bold mb-2 text-brand-50">Localisation</label>
-              <input
-                type="text"
-                name="location"
-                value={formData.location}
-                onChange={(e) => setFormData({...formData, location: e.target.value})}
-                className="w-full p-3 bg-brand-950 border border-brand-700 rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber"
-                placeholder="Paris, Île-de-France"
-              />
+              <label className="block text-sm font-bold mb-1 text-brand-50">Pays *</label>
+              <select
+                name="country"
+                value={formData.country}
+                onChange={handleInputChange}
+                className={`w-full p-3 bg-brand-950 border rounded-lg text-brand-50 focus:outline-none focus:border-brand-amber ${errors.country ? 'border-red-500' : 'border-brand-700'}`}
+              >
+                <option value="">Choisir</option>
+                <option value="Belgique">🇧🇪 Belgique</option>
+                <option value="France">🇫🇷 France</option>
+              </select>
+              {errors.country && <p className="text-red-500 text-xs mt-1">{errors.country}</p>}
             </div>
           </div>
 
-          <div>
-            <label className="block text-sm font-bold mb-2 text-brand-50">Profil LinkedIn</label>
-            <input
-              type="url"
-              name="linkedin"
-              value={formData.linkedin}
-              onChange={(e) => setFormData({...formData, linkedin: e.target.value})}
-              className="w-full p-3 bg-brand-950 border border-brand-700 rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber"
-              placeholder="https://linkedin.com/in/jeandupont"
-            />
+          {/* Formation */}
+          <div className="border-t border-brand-700 pt-6">
+            <p className="text-xs uppercase tracking-widest text-brand-50/40 font-bold mb-4">Formation</p>
+
+            <div className="grid md:grid-cols-2 gap-4">
+              <div>
+                <label className="block text-sm font-bold mb-1 text-brand-50">Niveau de diplôme *</label>
+                <select
+                  name="diploma"
+                  value={formData.diploma}
+                  onChange={handleInputChange}
+                  className={`w-full p-3 bg-brand-950 border rounded-lg text-brand-50 focus:outline-none focus:border-brand-amber ${errors.diploma ? 'border-red-500' : 'border-brand-700'}`}
+                >
+                  <option value="">Choisir</option>
+                  <option value="Néant">Néant</option>
+                  <option value="Bachelor">Bachelor</option>
+                  <option value="Master">Master</option>
+                  <option value="Master+">Master+</option>
+                </select>
+                {errors.diploma && <p className="text-red-500 text-xs mt-1">{errors.diploma}</p>}
+              </div>
+
+              <div>
+                <label className="block text-sm font-bold mb-1 text-brand-50">Domaine d'étude *</label>
+                <select
+                  name="field"
+                  value={formData.field}
+                  onChange={handleInputChange}
+                  className={`w-full p-3 bg-brand-950 border rounded-lg text-brand-50 focus:outline-none focus:border-brand-amber ${errors.field ? 'border-red-500' : 'border-brand-700'}`}
+                >
+                  <option value="">Choisir</option>
+                  <option value="Business">Business</option>
+                  <option value="Ingénierie">Ingénierie</option>
+                  <option value="Littéraire">Littéraire</option>
+                  <option value="Créatif">Créatif</option>
+                  <option value="Tech/IT">Tech/IT</option>
+                </select>
+                {errors.field && <p className="text-red-500 text-xs mt-1">{errors.field}</p>}
+              </div>
+            </div>
           </div>
 
-          <div>
-            <label className="block text-sm font-bold mb-2 text-brand-50">Vos compétences Odoo *</label>
-            <textarea
-              name="skills"
-              required
-              value={formData.skills}
-              onChange={(e) => setFormData({...formData, skills: e.target.value})}
-              className="w-full p-3 bg-brand-950 border border-brand-700 rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber"
-              rows="4"
-              placeholder="Ex: Développement backend (Python), modules ventes/stocks, PostgreSQL, API REST..."
-            />
-          </div>
+          {/* Expérience Odoo */}
+          <div className="border-t border-brand-700 pt-6">
+            <p className="text-xs uppercase tracking-widest text-brand-50/40 font-bold mb-4">Expérience Odoo</p>
 
-          <div>
             <label className="block text-sm font-bold mb-2 text-brand-50">Années d'expérience Odoo *</label>
             <select
-              name="experience"
-              required
-              value={formData.experience}
-              onChange={(e) => setFormData({...formData, experience: e.target.value})}
-              className="w-full p-3 bg-brand-950 border border-brand-700 rounded-lg text-brand-50 focus:outline-none focus:border-brand-amber"
+              name="odooExperience"
+              value={formData.odooExperience}
+              onChange={handleInputChange}
+              className={`w-full p-3 bg-brand-950 border rounded-lg text-brand-50 focus:outline-none focus:border-brand-amber ${errors.odooExperience ? 'border-red-500' : 'border-brand-700'}`}
             >
-              <option value="">Sélectionnez votre niveau</option>
-              <option value="Moins de 1 an">Moins de 1 an</option>
+              <option value="">Choisir votre expérience</option>
+              <option value="0">0 (Débutant)</option>
+              <option value="< 1 an">&lt; 1 an</option>
               <option value="1-2 ans">1-2 ans</option>
-              <option value="2-5 ans">2-5 ans</option>
-              <option value="5-10 ans">5-10 ans</option>
-              <option value="Plus de 10 ans">Plus de 10 ans</option>
+              <option value="3-4 ans">3-4 ans</option>
+              <option value="> 4 ans">&gt; 4 ans</option>
             </select>
+            {errors.odooExperience && <p className="text-red-500 text-xs mt-1">{errors.odooExperience}</p>}
+
+            <label className="block text-sm font-bold mb-2 mt-4 text-brand-50">
+              Certification officielle Odoo (3 dernières années) *
+            </label>
+            <div className="space-y-2">
+              {['Oui, je suis certifié', 'Non'].map((option) => (
+                <label
+                  key={option}
+                  className={`flex items-center p-3 border rounded-lg cursor-pointer transition ${
+                    formData.odooCertified === option ? 'border-brand-amber bg-brand-800' : 'border-brand-700 hover:border-brand-50/40'
+                  }`}
+                >
+                  <input
+                    type="radio"
+                    name="odooCertified"
+                    value={option}
+                    checked={formData.odooCertified === option}
+                    onChange={handleInputChange}
+                    className="w-4 h-4 accent-brand-amber cursor-pointer"
+                  />
+                  <span className="ml-2 font-medium text-brand-50 text-sm">{option}</span>
+                </label>
+              ))}
+            </div>
+            {errors.odooCertified && <p className="text-red-500 text-xs mt-2">{errors.odooCertified}</p>}
+          </div>
+
+          {/* Rôles */}
+          <div className="border-t border-brand-700 pt-6">
+            <p className="text-xs uppercase tracking-widest text-brand-50/40 font-bold mb-4">Rôles recherchés (max 2)</p>
+
+            <div className="space-y-2">
+              {['Fonctionnel', 'Gestion de projet', 'Sales / Account management', 'Tech'].map((role) => (
+                <label
+                  key={role}
+                  className={`flex items-center p-3 border rounded-lg cursor-pointer transition ${
+                    formData.roles.includes(role) ? 'border-brand-amber bg-brand-800' : 'border-brand-700 hover:border-brand-50/40'
+                  }`}
+                >
+                  <input
+                    type="checkbox"
+                    checked={formData.roles.includes(role)}
+                    onChange={() => handleRoleToggle(role)}
+                    className="w-4 h-4 accent-brand-amber rounded cursor-pointer"
+                    disabled={formData.roles.length >= 2 && !formData.roles.includes(role)}
+                  />
+                  <span className="ml-2 font-medium text-brand-50 text-sm">{role}</span>
+                </label>
+              ))}
+            </div>
+            {errors.roles && <p className="text-red-500 text-xs mt-2">{errors.roles}</p>}
+          </div>
+
+          {/* CV */}
+          <div className="border-t border-brand-700 pt-6">
+            <p className="text-xs uppercase tracking-widest text-brand-50/40 font-bold mb-4">CV (optionnel)</p>
+
+            <div className="border-2 border-dashed border-brand-700 rounded-lg p-4 text-center hover:border-brand-amber transition">
+              <label className="cursor-pointer">
+                <span className="text-sm font-medium text-brand-amber">Choisir un fichier</span>
+                <input
+                  type="file"
+                  accept=".pdf,.doc,.docx"
+                  onChange={handleFileChange}
+                  className="hidden"
+                />
+              </label>
+              <p className="text-xs text-brand-50/40 mt-1">PDF, DOC ou DOCX</p>
+              {formData.cvFileName && (
+                <p className="text-xs text-brand-amber mt-2 font-medium">✓ {formData.cvFileName}</p>
+              )}
+            </div>
           </div>
 
           <button
@@ -616,7 +781,7 @@ function TalentsPage() {
             disabled={loading}
             className="w-full bg-brand-amber text-brand-950 py-3 rounded-lg font-bold hover:bg-brand-amber-light transition disabled:opacity-50"
           >
-            {loading ? '⏳ Envoi en cours...' : '✓ S\'inscrire à notre talent pool'}
+            {loading ? '⏳ Envoi...' : '✓ Envoyer ma candidature'}
           </button>
 
           <p className="text-xs text-brand-50/40 text-center">
@@ -631,7 +796,7 @@ function TalentsPage() {
 function AboutPage({ testimonials, setCurrentPage }) {
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-display font-bold mb-8 text-brand-50">À propos de DooRecruit</h1>
+      <h1 className="text-4xl font-display font-black mb-8 text-brand-50">À propos de DooRecruit</h1>
 
       <div className="bg-brand-900 border border-brand-700 p-8 rounded-lg mb-12">
         <h2 className="text-2xl font-bold mb-4 text-brand-50">Notre mission</h2>
@@ -646,7 +811,22 @@ function AboutPage({ testimonials, setCurrentPage }) {
         </p>
       </div>
 
-      <h2 className="text-3xl font-display font-bold mb-8 text-brand-50">Témoignages</h2>
+      <div className="bg-brand-800 border border-brand-amber p-8 rounded-lg mb-12">
+        <p className="uppercase tracking-widest text-sm text-brand-amber font-bold mb-3">Notre spécialisation</p>
+        <h2 className="text-2xl font-display font-black mb-4 text-brand-50">100% Odoo. Aucune dispersion.</h2>
+        <p className="text-brand-50/70 text-lg mb-4">
+          Contrairement aux cabinets généralistes, DooRecruit ne recrute que sur l'écosystème Odoo :
+          développement (Python, PostgreSQL, API), consultants fonctionnels (ventes, stocks, comptabilité),
+          chefs de projet, intégrateurs et administrateurs systèmes.
+        </p>
+        <p className="text-brand-50/70 text-lg">
+          Cette spécialisation nous permet d'évaluer réellement les compétences techniques d'un candidat
+          plutôt que de nous fier à un CV — et de parler le même langage que les entreprises qui déploient Odoo,
+          en France 🇫🇷 comme en Belgique 🇧🇪.
+        </p>
+      </div>
+
+      <h2 className="text-3xl font-display font-black mb-8 text-brand-50">Témoignages</h2>
       <div className="grid md:grid-cols-3 gap-8 mb-12">
         {testimonials.map((testimonial, i) => (
           <div key={i} className="bg-brand-900 border border-brand-700 rounded-lg p-6">
@@ -665,7 +845,7 @@ function AboutPage({ testimonials, setCurrentPage }) {
       </div>
 
       <div className="bg-brand-800 border border-brand-amber rounded-lg p-8 text-center">
-        <h2 className="text-2xl font-display font-bold mb-4 text-brand-50">Vous cherchez à recruter?</h2>
+        <h2 className="text-2xl font-display font-black mb-4 text-brand-50">Vous cherchez à recruter?</h2>
         <p className="mb-6 text-brand-50/70">Contactez notre équipe pour discuter de vos besoins.</p>
         <button onClick={() => setCurrentPage('contact')} className="bg-brand-amber text-brand-950 px-8 py-3 rounded-lg font-bold hover:bg-brand-amber-light transition">
           Nous contacter
@@ -724,7 +904,7 @@ function ApproachPage({ setCurrentPage }) {
   return (
     <div className="max-w-5xl mx-auto px-4 py-12">
       <p className="uppercase tracking-widest text-sm text-brand-amber font-bold mb-3">Méthodologie</p>
-      <h1 className="text-4xl font-display font-bold mb-4 text-brand-50">Notre approche</h1>
+      <h1 className="text-4xl font-display font-black mb-4 text-brand-50">Notre approche</h1>
       <p className="text-lg text-brand-50/60 mb-16 max-w-2xl">
         Une méthodologie éprouvée, taillée pour l'écosystème Odoo. Du brief initial à l'intégration,
         nous pilotons chaque étape du recrutement en France 🇫🇷 et en Belgique 🇧🇪.
@@ -733,7 +913,7 @@ function ApproachPage({ setCurrentPage }) {
       <div className="space-y-8 mb-16">
         {steps.map((step) => (
           <div key={step.number} className="flex gap-6 items-start">
-            <div className="text-3xl font-display font-bold text-brand-amber shrink-0 w-16">{step.number}</div>
+            <div className="text-3xl font-display font-black text-brand-amber shrink-0 w-16">{step.number}</div>
             <div className="border-l border-brand-700 pl-6 pb-8 flex-1">
               <h3 className="text-xl font-bold text-brand-50 mb-2">{step.title}</h3>
               <p className="text-brand-50/60">{step.description}</p>
@@ -742,7 +922,7 @@ function ApproachPage({ setCurrentPage }) {
         ))}
       </div>
 
-      <h2 className="text-2xl font-display font-bold mb-8 text-brand-50">Nos engagements</h2>
+      <h2 className="text-2xl font-display font-black mb-8 text-brand-50">Nos engagements</h2>
       <div className="grid md:grid-cols-2 gap-6 mb-16">
         {commitments.map((c) => (
           <div key={c.title} className="bg-brand-900 border border-brand-700 rounded-lg p-6 flex gap-4">
@@ -756,7 +936,7 @@ function ApproachPage({ setCurrentPage }) {
       </div>
 
       <div className="bg-brand-800 border border-brand-amber rounded-lg p-8 text-center">
-        <h2 className="text-2xl font-display font-bold mb-4 text-brand-50">Prêt à lancer votre recrutement ?</h2>
+        <h2 className="text-2xl font-display font-black mb-4 text-brand-50">Prêt à lancer votre recrutement ?</h2>
         <p className="mb-6 text-brand-50/70">Décrivez votre besoin, notre équipe revient vers vous sous 24h.</p>
         <button onClick={() => setCurrentPage('contact')} className="bg-brand-amber text-brand-950 px-8 py-3 rounded-lg font-bold hover:bg-brand-amber-light transition">
           Recruter un talent
@@ -832,7 +1012,7 @@ function ContactPage() {
       <div className="max-w-4xl mx-auto px-4 py-12">
         <div className="bg-brand-900 border-2 border-brand-amber rounded-lg p-8 text-center">
           <div className="text-5xl mb-4">✅</div>
-          <h2 className="text-3xl font-display font-bold text-brand-amber mb-4">Brief bien reçu !</h2>
+          <h2 className="text-3xl font-display font-black text-brand-amber mb-4">Brief bien reçu !</h2>
           <p className="text-brand-50/80 text-lg mb-4">
             Merci. Un consultant DooRecruit spécialisé Odoo revient vers vous sous 24h avec une première shortlist de profils.
           </p>
@@ -847,7 +1027,7 @@ function ContactPage() {
   return (
     <div className="max-w-5xl mx-auto px-4 py-12">
       <p className="uppercase tracking-widest text-sm text-brand-amber font-bold mb-3">Search & Selection Odoo</p>
-      <h1 className="text-4xl font-display font-bold mb-2 text-brand-50">Confiez-nous votre recherche de talent Odoo</h1>
+      <h1 className="text-4xl font-display font-black mb-2 text-brand-50">Confiez-nous votre recherche de talent Odoo</h1>
       <p className="text-lg text-brand-50/60 mb-2">Décrivez votre besoin, nos consultants reviennent vers vous sous 24h avec une shortlist qualifiée.</p>
       <p className="text-sm text-brand-50/40 mb-12">Recrutement en France 🇫🇷 et en Belgique 🇧🇪 — CDI, freelance et intérim</p>
 
@@ -1061,7 +1241,7 @@ function ContactPage() {
         {/* Infos & Avantages */}
         <div>
           <div className="bg-brand-900 border border-brand-700 rounded-lg p-8 mb-8">
-            <h3 className="text-2xl font-display font-bold text-brand-50 mb-6">Pourquoi choisir DooRecruit ?</h3>
+            <h3 className="text-2xl font-display font-black text-brand-50 mb-6">Pourquoi choisir DooRecruit ?</h3>
             <div className="space-y-4">
               <div className="flex gap-4">
                 <div className="text-2xl">🌍</div>
@@ -1106,7 +1286,7 @@ function ContactPage() {
           </div>
 
           <div className="bg-brand-800 border border-brand-amber rounded-lg p-8">
-            <h3 className="text-2xl font-display font-bold text-brand-50 mb-4">Informations de contact directes</h3>
+            <h3 className="text-2xl font-display font-black text-brand-50 mb-4">Informations de contact directes</h3>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
                 <Mail size={20} className="mt-1 text-brand-amber" />
