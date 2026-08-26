@@ -11,7 +11,7 @@ export default function DooRecruit() {
     {
       id: 1,
       title: 'Développeur Odoo Senior',
-      company: 'TechCorp France',
+      sector: 'Éditeur logiciel',
       location: 'Paris',
       level: 'senior',
       salary: '50-65k€',
@@ -22,7 +22,7 @@ export default function DooRecruit() {
     {
       id: 2,
       title: 'Consultant Fonctionnel Odoo',
-      company: 'ERP Solutions',
+      sector: 'Cabinet de conseil ERP',
       location: 'Lyon',
       level: 'mid',
       salary: '40-55k€',
@@ -33,7 +33,7 @@ export default function DooRecruit() {
     {
       id: 3,
       title: 'Chef de Projet Odoo',
-      company: 'Digital Consulting',
+      sector: 'Agence digitale',
       location: 'Toulouse',
       level: 'mid',
       salary: '45-60k€',
@@ -44,7 +44,7 @@ export default function DooRecruit() {
     {
       id: 4,
       title: 'Développeur Odoo Junior',
-      company: 'StartUp IT',
+      sector: 'Start-up SaaS',
       location: 'Bordeaux',
       level: 'junior',
       salary: '28-35k€',
@@ -55,7 +55,7 @@ export default function DooRecruit() {
     {
       id: 5,
       title: 'Specialist Intégration Odoo',
-      company: 'Integration Pro',
+      sector: 'Intégrateur Odoo',
       location: 'Nantes',
       level: 'senior',
       salary: '55-70k€',
@@ -66,7 +66,7 @@ export default function DooRecruit() {
     {
       id: 6,
       title: 'Admin Odoo',
-      company: 'Enterprise Solutions',
+      sector: 'Groupe industriel',
       location: 'Lille',
       level: 'junior',
       salary: '30-38k€',
@@ -338,7 +338,7 @@ function HomePage({ setCurrentPage }) {
             {[0,1,2,3].map((i) => (
               <JobCard key={i} job={{
                 title: ['Développeur Odoo Senior', 'Consultant Fonctionnel', 'Chef de Projet', 'Développeur Junior'][i],
-                company: ['TechCorp', 'ERP Solutions', 'Digital Consulting', 'StartUp IT'][i],
+                sector: ['Éditeur logiciel', 'Cabinet de conseil ERP', 'Agence digitale', 'Start-up SaaS'][i],
                 salary: ['50-65k€', '40-55k€', '45-60k€', '28-35k€'][i],
                 location: ['Paris', 'Lyon', 'Toulouse', 'Bordeaux'][i]
               }} />
@@ -393,7 +393,7 @@ function JobsPage({ jobs, filterRole, filterLevel, setFilterRole, setFilterLevel
             <div className="flex justify-between items-start mb-4">
               <div>
                 <h3 className="text-xl font-bold text-brand-50">{job.title}</h3>
-                <p className="text-brand-50/60">{job.company}</p>
+                <p className="text-brand-50/60">{job.sector} <span className="text-brand-50/30">· client confidentiel</span></p>
               </div>
               <div className="text-3xl">{job.image}</div>
             </div>
@@ -1436,7 +1436,7 @@ function JobCard({ job }) {
   return (
     <div className="bg-brand-950 rounded-lg p-6 border border-brand-700 hover:border-brand-amber transition">
       <h3 className="text-lg font-bold text-brand-50 mb-2">{job.title}</h3>
-      <p className="text-brand-50/60 mb-4">{job.company} • {job.location}</p>
+      <p className="text-brand-50/60 mb-4">{job.sector} • {job.location}</p>
       <p className="text-xl font-bold text-brand-amber">{job.salary}</p>
     </div>
   );
