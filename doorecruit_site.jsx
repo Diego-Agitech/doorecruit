@@ -178,7 +178,7 @@ export default function DooRecruit() {
             </div>
 
             {/* Mobile Menu Button */}
-            <button onClick={() => setMenuOpen(!menuOpen)} className="md:hidden text-brand-50">
+            <button onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? 'Fermer le menu' : 'Ouvrir le menu'} className="md:hidden text-brand-50 p-2.5 -mr-2.5 flex items-center justify-center">
               {menuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
@@ -397,7 +397,7 @@ function JobsPage({ jobs, filterRole, filterLevel, setFilterRole, setFilterLevel
         <div className="grid md:grid-cols-3 gap-4">
           <div>
             <label className="block text-sm font-bold mb-2 text-brand-50">Niveau</label>
-            <select value={filterLevel} onChange={(e) => setFilterLevel(e.target.value)} className="w-full p-2 bg-brand-950 border border-brand-700 rounded text-brand-50 focus:outline-none focus:border-brand-amber">
+            <select value={filterLevel} onChange={(e) => setFilterLevel(e.target.value)} className="w-full p-2 bg-brand-950 border border-brand-700 rounded text-brand-50 focus:outline-none focus:border-brand-amber focus:ring-2 focus:ring-brand-amber/40">
               <option value="all">Tous les niveaux</option>
               <option value="junior">Junior</option>
               <option value="mid">Intermédiaire</option>
@@ -604,7 +604,7 @@ function TalentsPage() {
                   name="firstName"
                   value={formData.firstName}
                   onChange={handleInputChange}
-                  className={`w-full p-3 bg-brand-950 border rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber ${errors.firstName ? 'border-red-500' : 'border-brand-700'}`}
+                  className={`w-full p-3 bg-brand-950 border rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber focus:ring-2 focus:ring-brand-amber/40 ${errors.firstName ? 'border-red-500' : 'border-brand-700'}`}
                   placeholder="Jean"
                 />
                 {errors.firstName && <p className="text-red-500 text-xs mt-1">{errors.firstName}</p>}
@@ -616,7 +616,7 @@ function TalentsPage() {
                   name="lastName"
                   value={formData.lastName}
                   onChange={handleInputChange}
-                  className={`w-full p-3 bg-brand-950 border rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber ${errors.lastName ? 'border-red-500' : 'border-brand-700'}`}
+                  className={`w-full p-3 bg-brand-950 border rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber focus:ring-2 focus:ring-brand-amber/40 ${errors.lastName ? 'border-red-500' : 'border-brand-700'}`}
                   placeholder="Dupont"
                 />
                 {errors.lastName && <p className="text-red-500 text-xs mt-1">{errors.lastName}</p>}
@@ -631,7 +631,7 @@ function TalentsPage() {
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className={`w-full p-3 bg-brand-950 border rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber ${errors.email ? 'border-red-500' : 'border-brand-700'}`}
+                  className={`w-full p-3 bg-brand-950 border rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber focus:ring-2 focus:ring-brand-amber/40 ${errors.email ? 'border-red-500' : 'border-brand-700'}`}
                   placeholder="jean@example.com"
                 />
                 {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
@@ -643,7 +643,7 @@ function TalentsPage() {
                   name="phone"
                   value={formData.phone}
                   onChange={handleInputChange}
-                  className={`w-full p-3 bg-brand-950 border rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber ${errors.phone ? 'border-red-500' : 'border-brand-700'}`}
+                  className={`w-full p-3 bg-brand-950 border rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber focus:ring-2 focus:ring-brand-amber/40 ${errors.phone ? 'border-red-500' : 'border-brand-700'}`}
                   placeholder="+33 6 12 34 56 78"
                 />
                 {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
@@ -656,7 +656,7 @@ function TalentsPage() {
                 name="country"
                 value={formData.country}
                 onChange={handleInputChange}
-                className={`w-full p-3 bg-brand-950 border rounded-lg text-brand-50 focus:outline-none focus:border-brand-amber ${errors.country ? 'border-red-500' : 'border-brand-700'}`}
+                className={`w-full p-3 bg-brand-950 border rounded-lg text-brand-50 focus:outline-none focus:border-brand-amber focus:ring-2 focus:ring-brand-amber/40 ${errors.country ? 'border-red-500' : 'border-brand-700'}`}
               >
                 <option value="">Choisir</option>
                 <option value="Belgique">🇧🇪 Belgique</option>
@@ -677,7 +677,7 @@ function TalentsPage() {
                   name="diploma"
                   value={formData.diploma}
                   onChange={handleInputChange}
-                  className={`w-full p-3 bg-brand-950 border rounded-lg text-brand-50 focus:outline-none focus:border-brand-amber ${errors.diploma ? 'border-red-500' : 'border-brand-700'}`}
+                  className={`w-full p-3 bg-brand-950 border rounded-lg text-brand-50 focus:outline-none focus:border-brand-amber focus:ring-2 focus:ring-brand-amber/40 ${errors.diploma ? 'border-red-500' : 'border-brand-700'}`}
                 >
                   <option value="">Choisir</option>
                   <option value="Néant">Néant</option>
@@ -694,7 +694,7 @@ function TalentsPage() {
                   name="field"
                   value={formData.field}
                   onChange={handleInputChange}
-                  className={`w-full p-3 bg-brand-950 border rounded-lg text-brand-50 focus:outline-none focus:border-brand-amber ${errors.field ? 'border-red-500' : 'border-brand-700'}`}
+                  className={`w-full p-3 bg-brand-950 border rounded-lg text-brand-50 focus:outline-none focus:border-brand-amber focus:ring-2 focus:ring-brand-amber/40 ${errors.field ? 'border-red-500' : 'border-brand-700'}`}
                 >
                   <option value="">Choisir</option>
                   <option value="Business">Business</option>
@@ -717,7 +717,7 @@ function TalentsPage() {
               name="odooExperience"
               value={formData.odooExperience}
               onChange={handleInputChange}
-              className={`w-full p-3 bg-brand-950 border rounded-lg text-brand-50 focus:outline-none focus:border-brand-amber ${errors.odooExperience ? 'border-red-500' : 'border-brand-700'}`}
+              className={`w-full p-3 bg-brand-950 border rounded-lg text-brand-50 focus:outline-none focus:border-brand-amber focus:ring-2 focus:ring-brand-amber/40 ${errors.odooExperience ? 'border-red-500' : 'border-brand-700'}`}
             >
               <option value="">Choisir votre expérience</option>
               <option value="0">0 (Débutant)</option>
@@ -1095,8 +1095,8 @@ function ContactPage() {
     );
   }
 
-  const selectClass = (field) => `w-full p-3 bg-brand-950 border rounded-lg text-brand-50 focus:outline-none focus:border-brand-amber ${errors[field] ? 'border-red-500' : 'border-brand-700'}`;
-  const inputClass = (field) => `w-full p-3 bg-brand-950 border rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber ${errors[field] ? 'border-red-500' : 'border-brand-700'}`;
+  const selectClass = (field) => `w-full p-3 bg-brand-950 border rounded-lg text-brand-50 focus:outline-none focus:border-brand-amber focus:ring-2 focus:ring-brand-amber/40 ${errors[field] ? 'border-red-500' : 'border-brand-700'}`;
+  const inputClass = (field) => `w-full p-3 bg-brand-950 border rounded-lg text-brand-50 placeholder-brand-50/30 focus:outline-none focus:border-brand-amber focus:ring-2 focus:ring-brand-amber/40 ${errors[field] ? 'border-red-500' : 'border-brand-700'}`;
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-12">
