@@ -34,71 +34,20 @@ export default function DooRecruit() {
     },
     {
       id: 2,
-      title: 'Consultant Fonctionnel Odoo',
-      sector: 'Cabinet de conseil ERP',
-      location: 'Lyon',
-      country: 'France',
+      title: 'Business Analyst Odoo Médior',
+      company: 'Agitech',
+      sector: 'Intégrateur Odoo',
+      location: 'Bruxelles',
+      country: 'Belgique',
       level: 'mid',
-      salary: '40-55k€',
-      modules: ['Ventes', 'Stocks', 'Comptabilité'],
-      description: 'Vous allez accompagner nos clients dans leurs projets de transformation Odoo.',
-      fullDescription: 'Vous interviendrez sur des projets de déploiement et d\'optimisation Odoo pour une clientèle variée (PME, ETI). De l\'analyse des besoins au paramétrage, en passant par la formation des utilisateurs, vous êtes le garant de la réussite fonctionnelle du projet.',
-      responsibilities: ['Analyser les besoins métier des clients', 'Paramétrer les modules Ventes, Stocks et Comptabilité', 'Former les utilisateurs finaux', 'Assurer le support post-déploiement']
+      salary: '40-48k€',
+      modules: ['Analyse fonctionnelle', 'Spécifications', 'Tests de recette'],
+      description: 'Agitech recherche un BA médior pour faire le lien entre besoins métier et équipes techniques Odoo.',
+      fullDescription: 'Chez Agitech, vous accompagnez nos clients dans leurs projets de transformation digitale sous Odoo. En tant que Business Analyst médior, vous faites le lien entre les besoins métier et les équipes techniques : recueil des besoins, rédaction de spécifications, tests de recette et accompagnement au changement.',
+      responsibilities: ['Recueillir et analyser les besoins métier', 'Rédiger les spécifications fonctionnelles', 'Réaliser les tests de recette', 'Accompagner les utilisateurs au changement']
     },
     {
       id: 3,
-      title: 'Chef de Projet Odoo',
-      sector: 'Agence digitale',
-      location: 'Toulouse',
-      country: 'France',
-      level: 'mid',
-      salary: '45-60k€',
-      modules: ['Gestion de projet', 'Agile', 'Relation client'],
-      description: 'Piloter des projets Odoo complets de la conception à la mise en production.',
-      fullDescription: 'Véritable chef d\'orchestre, vous pilotez des projets d\'implémentation Odoo de bout en bout : cadrage, planning, coordination des équipes techniques et fonctionnelles, et relation client jusqu\'à la mise en production.',
-      responsibilities: ['Cadrer et planifier les projets Odoo', 'Coordonner les équipes techniques et fonctionnelles', 'Être l\'interlocuteur privilégié du client', 'Piloter le budget et les délais']
-    },
-    {
-      id: 4,
-      title: 'Développeur Odoo Junior',
-      sector: 'Start-up SaaS',
-      location: 'Bordeaux',
-      country: 'France',
-      level: 'junior',
-      salary: '28-35k€',
-      modules: ['Python', 'Javascript', 'API'],
-      description: 'Débuter votre carrière dans un environnement dynamique et bienveillant.',
-      fullDescription: 'Vous rejoignez une équipe technique bienveillante pour développer vos compétences sur Odoo. Encadré par des développeurs seniors, vous participerez à des projets concrets tout en montant en compétence sur le framework et l\'écosystème Python.',
-      responsibilities: ['Développer des fonctionnalités sous supervision', 'Corriger des anomalies', 'Monter en compétence sur Odoo et Python', 'Participer aux points d\'équipe agile']
-    },
-    {
-      id: 5,
-      title: 'Lead Développeur Intégration Odoo',
-      sector: 'Intégrateur Odoo',
-      location: 'Nantes',
-      country: 'France',
-      level: 'lead',
-      salary: '55-70k€',
-      modules: ['Intégrations API', 'Webhooks', 'Synchronisation données'],
-      description: 'Expertiser les intégrations complexes entre Odoo et systèmes tiers.',
-      fullDescription: 'Vous concevez et développez les interfaces entre Odoo et les systèmes tiers du client (CRM, logistique, e-commerce). Vous êtes garant de la fiabilité et de la performance des flux de données.',
-      responsibilities: ['Concevoir des architectures d\'intégration', 'Développer des API et webhooks', 'Fiabiliser les synchronisations de données', 'Documenter les intégrations']
-    },
-    {
-      id: 6,
-      title: 'Admin Odoo',
-      sector: 'Groupe industriel',
-      location: 'Lille',
-      country: 'France',
-      level: 'junior',
-      salary: '30-38k€',
-      modules: ['Administration système', 'Utilisateurs', 'Maintenance'],
-      description: 'Gérer et maintenir l\'infrastructure Odoo de nos clients.',
-      fullDescription: 'Vous assurez le bon fonctionnement quotidien de l\'environnement Odoo : gestion des utilisateurs et des droits, maintenance applicative, suivi des performances et support de premier niveau.',
-      responsibilities: ['Gérer les utilisateurs et les droits d\'accès', 'Assurer la maintenance applicative', 'Suivre les performances de l\'instance Odoo', 'Traiter les tickets de support niveau 1']
-    },
-    {
-      id: 7,
       title: 'Développeur Odoo Confirmé',
       sector: 'Éditeur logiciel',
       location: 'Bruxelles',
@@ -111,7 +60,7 @@ export default function DooRecruit() {
       responsibilities: ['Développer des modules Odoo sur mesure', 'Participer aux choix d\'architecture', 'Assurer la qualité du code (tests, revues)', 'Échanger directement avec les clients belges']
     },
     {
-      id: 8,
+      id: 4,
       title: 'Consultant Fonctionnel Odoo',
       sector: 'Cabinet de conseil ERP',
       location: 'Anvers',
@@ -122,6 +71,19 @@ export default function DooRecruit() {
       description: 'Accompagnez des entreprises belges dans leur transformation digitale avec Odoo.',
       fullDescription: 'Vous intervenez sur des projets de déploiement Odoo auprès de clients belges, principalement dans le secteur logistique et industriel. Vous maîtrisez le paramétrage des modules Achats, Stocks et Logistique.',
       responsibilities: ['Analyser les processus achats et logistique', 'Paramétrer les modules Odoo correspondants', 'Former les équipes clientes', 'Rédiger la documentation fonctionnelle']
+    },
+    {
+      id: 5,
+      title: 'Lead Chef de Projet Odoo',
+      sector: 'Agence digitale',
+      location: 'Liège',
+      country: 'Belgique',
+      level: 'lead',
+      salary: '58-68k€',
+      modules: ['Gestion de projet', 'Agile', 'Relation client'],
+      description: 'Piloter des projets Odoo complets de la conception à la mise en production.',
+      fullDescription: 'Véritable chef d\'orchestre, vous pilotez des projets d\'implémentation Odoo de bout en bout pour une clientèle belge : cadrage, planning, coordination des équipes techniques et fonctionnelles, et relation client jusqu\'à la mise en production.',
+      responsibilities: ['Cadrer et planifier les projets Odoo', 'Coordonner les équipes techniques et fonctionnelles', 'Être l\'interlocuteur privilégié du client', 'Piloter le budget et les délais']
     }
   ];
 
@@ -211,7 +173,7 @@ export default function DooRecruit() {
       case 'contact':
         return <ContactPage />;
       default:
-        return <HomePage setCurrentPage={setCurrentPage} />;
+        return <HomePage setCurrentPage={setCurrentPage} jobs={jobs} />;
     }
   };
 
@@ -302,7 +264,7 @@ export default function DooRecruit() {
                 </div>
                 <div className="flex items-center gap-2">
                   <Phone size={16} />
-                  <span>+33 (0)1 23 45 67 89</span>
+                  <span>+32 2 808 12 34</span>
                 </div>
               </div>
             </div>
@@ -316,7 +278,7 @@ export default function DooRecruit() {
   );
 }
 
-function HomePage({ setCurrentPage }) {
+function HomePage({ setCurrentPage, jobs }) {
   return (
     <div>
       {/* Hero */}
@@ -434,13 +396,8 @@ function HomePage({ setCurrentPage }) {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-display font-black mb-12 text-brand-50">Dernières opportunités</h2>
           <div className="grid md:grid-cols-2 gap-6 mb-8">
-            {[0,1,2,3].map((i) => (
-              <JobCard key={i} job={{
-                title: ['Développeur Odoo Senior', 'Consultant Fonctionnel', 'Chef de Projet', 'Développeur Junior'][i],
-                sector: ['Éditeur logiciel', 'Cabinet de conseil ERP', 'Agence digitale', 'Start-up SaaS'][i],
-                salary: ['50-65k€', '40-55k€', '45-60k€', '28-35k€'][i],
-                location: ['Paris', 'Lyon', 'Toulouse', 'Bordeaux'][i]
-              }} />
+            {jobs.slice(0, 4).map((job) => (
+              <JobCard key={job.id} job={job} />
             ))}
           </div>
           <div className="text-center">
@@ -512,7 +469,9 @@ function JobsPage({ jobs, filterLevel, filterCountry, setFilterLevel, setFilterC
         {jobs.map(job => (
           <div key={job.id} className="bg-brand-900 border border-brand-700 border-l-2 border-l-brand-amber rounded-lg p-6 hover:border-brand-amber transition">
             <h3 className="text-xl font-bold text-brand-50">{job.title}</h3>
-            <p className="text-brand-50/60 mb-4">{job.sector} <span className="text-brand-50/30">· client confidentiel</span></p>
+            <p className="text-brand-50/60 mb-4">
+              {job.company ? <span className="text-brand-amber-light font-medium">{job.company}</span> : <>{job.sector} <span className="text-brand-50/30">· client confidentiel</span></>}
+            </p>
             <p className="text-brand-50/70 mb-4">{job.description}</p>
             <div className="flex flex-wrap gap-2 mb-4">
               <LocationBadge location={job.location} country={job.country} />
@@ -559,7 +518,9 @@ function JobDetailPage({ job, setCurrentPage }) {
         </div>
         <div>
           <h1 className="text-3xl font-display font-black text-brand-50 mb-1">{job.title}</h1>
-          <p className="text-brand-50/60">{job.sector} <span className="text-brand-50/30">· client confidentiel</span></p>
+          <p className="text-brand-50/60">
+            {job.company ? <span className="text-brand-amber-light font-medium">{job.company}</span> : <>{job.sector} <span className="text-brand-50/30">· client confidentiel</span></>}
+          </p>
         </div>
       </div>
 
@@ -1591,7 +1552,7 @@ function ContactPage() {
               <Phone size={20} className="mt-1 text-brand-amber" />
               <div>
                 <p className="font-bold text-brand-50">Téléphone</p>
-                <p className="text-brand-50/70">+33 (0)1 23 45 67 89</p>
+                <p className="text-brand-50/70">+32 2 808 12 34</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
@@ -1622,7 +1583,7 @@ function JobCard({ job }) {
   return (
     <div className="bg-brand-950 rounded-lg p-6 border border-brand-700 border-l-2 border-l-brand-amber hover:border-brand-amber transition">
       <h3 className="text-lg font-bold text-brand-50 mb-2">{job.title}</h3>
-      <p className="text-brand-50/60 mb-4">{job.sector} • {job.location}</p>
+      <p className="text-brand-50/60 mb-4">{job.company || job.sector} • {job.location}</p>
       <p className="text-xl font-bold text-brand-amber">{job.salary}</p>
     </div>
   );
