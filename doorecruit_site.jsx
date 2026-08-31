@@ -208,8 +208,6 @@ export default function DooRecruit() {
         return <TalentsPage />;
       case 'about':
         return <AboutPage testimonials={testimonials} setCurrentPage={setCurrentPage} />;
-      case 'approach':
-        return <ApproachPage setCurrentPage={setCurrentPage} />;
       case 'contact':
         return <ContactPage />;
       default:
@@ -231,14 +229,13 @@ export default function DooRecruit() {
             </button>
 
             {/* Desktop Menu */}
-            <div className="hidden md:flex gap-8">
+            <div className="hidden md:flex items-center gap-8">
               <button onClick={() => setCurrentPage('home')} className="text-brand-50/70 hover:text-brand-amber font-medium transition">Accueil</button>
               <button onClick={() => setCurrentPage('jobs')} className="text-brand-50/70 hover:text-brand-amber font-medium transition">Offres</button>
               <button onClick={() => setCurrentPage('blog')} className="text-brand-50/70 hover:text-brand-amber font-medium transition">Blog</button>
               <button onClick={() => setCurrentPage('talents')} className="text-brand-50/70 hover:text-brand-amber font-medium transition">Candidats</button>
-              <button onClick={() => setCurrentPage('contact')} className="text-brand-50/70 hover:text-brand-amber font-medium transition">Entreprises</button>
-              <button onClick={() => setCurrentPage('approach')} className="text-brand-50/70 hover:text-brand-amber font-medium transition">Notre approche</button>
               <button onClick={() => setCurrentPage('about')} className="text-brand-50/70 hover:text-brand-amber font-medium transition">À propos</button>
+              <button onClick={() => setCurrentPage('contact')} className="bg-brand-amber text-brand-950 px-4 py-2 rounded-full font-bold text-sm hover:bg-brand-amber-light transition">Entreprises</button>
             </div>
 
             {/* Mobile Menu Button */}
@@ -256,9 +253,8 @@ export default function DooRecruit() {
               <button onClick={() => { setCurrentPage('jobs'); setMenuOpen(false); }} className="block w-full text-left text-brand-50/70 hover:text-brand-amber font-medium py-2">Offres</button>
               <button onClick={() => { setCurrentPage('blog'); setMenuOpen(false); }} className="block w-full text-left text-brand-50/70 hover:text-brand-amber font-medium py-2">Blog</button>
               <button onClick={() => { setCurrentPage('talents'); setMenuOpen(false); }} className="block w-full text-left text-brand-50/70 hover:text-brand-amber font-medium py-2">Candidats</button>
-              <button onClick={() => { setCurrentPage('contact'); setMenuOpen(false); }} className="block w-full text-left text-brand-50/70 hover:text-brand-amber font-medium py-2">Entreprises</button>
-              <button onClick={() => { setCurrentPage('approach'); setMenuOpen(false); }} className="block w-full text-left text-brand-50/70 hover:text-brand-amber font-medium py-2">Notre approche</button>
               <button onClick={() => { setCurrentPage('about'); setMenuOpen(false); }} className="block w-full text-left text-brand-50/70 hover:text-brand-amber font-medium py-2">À propos</button>
+              <button onClick={() => { setCurrentPage('contact'); setMenuOpen(false); }} className="block w-full text-center bg-brand-amber text-brand-950 rounded-full font-bold py-2.5 mt-2">Entreprises</button>
             </div>
           </div>
         )}
@@ -294,7 +290,6 @@ export default function DooRecruit() {
               <div className="space-y-2">
                 <button onClick={() => setCurrentPage('talents')} className="text-brand-50/50 hover:text-brand-amber block">S'inscrire</button>
                 <button onClick={() => setCurrentPage('contact')} className="text-brand-50/50 hover:text-brand-amber block">Nous contacter</button>
-                <button onClick={() => setCurrentPage('approach')} className="text-brand-50/50 hover:text-brand-amber block">Notre approche</button>
                 <button onClick={() => setCurrentPage('about')} className="text-brand-50/50 hover:text-brand-amber block">À propos</button>
               </div>
             </div>
@@ -346,6 +341,19 @@ function HomePage({ setCurrentPage }) {
               Je cherche un talent <ArrowRight size={20} />
             </button>
           </div>
+        </div>
+      </section>
+
+      {/* Accroche écosystème Odoo */}
+      <section className="py-14 px-4 border-y border-brand-700 bg-brand-800">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-2xl md:text-3xl font-display font-black text-brand-50 leading-snug">
+            Odoo est un écosystème à part.
+          </p>
+          <p className="text-lg md:text-xl text-brand-50/70 mt-3">
+            Python, modules métier, intégrations spécifiques : ça ne se recrute pas comme un poste généraliste.
+            Ça demande une approche <span className="text-brand-amber font-bold">à part</span>.
+          </p>
         </div>
       </section>
 
@@ -414,7 +422,7 @@ function HomePage({ setCurrentPage }) {
             ))}
           </div>
           <div className="text-center">
-            <button onClick={() => setCurrentPage('approach')} className="border border-brand-50/30 text-brand-50 px-8 py-3 rounded-full font-bold hover:border-brand-amber hover:text-brand-amber transition inline-flex items-center gap-2">
+            <button onClick={() => setCurrentPage('about')} className="border border-brand-50/30 text-brand-50 px-8 py-3 rounded-full font-bold hover:border-brand-amber hover:text-brand-amber transition inline-flex items-center gap-2">
               Découvrir notre méthodologie complète <ArrowRight size={20} />
             </button>
           </div>
@@ -976,68 +984,6 @@ function TalentsPage() {
 }
 
 function AboutPage({ testimonials, setCurrentPage }) {
-  return (
-    <div className="max-w-7xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-display font-black mb-8 text-brand-50">À propos de DooRecruit</h1>
-
-      <div className="bg-brand-900 border border-brand-700 p-8 rounded-lg mb-12">
-        <h2 className="text-2xl font-bold mb-4 text-brand-50">Notre mission</h2>
-        <p className="text-brand-50/70 text-lg mb-4">
-          Chez DooRecruit, nous croyons que le recrutement Odoo mérite une expertise spécialisée.
-          Notre mission est de connecter les meilleurs talents Odoo avec les entreprises qui les cherchent,
-          en créant des matches authentiques et durables — en France 🇫🇷 comme en Belgique 🇧🇪.
-        </p>
-        <p className="text-brand-50/70 text-lg">
-          Nous comprenons la complexité de recruter pour l'écosystème Odoo - c'est pourquoi notre équipe
-          possède une expertise technique approfondie combinée à un vrai talent pour identifier les candidats idéaux.
-        </p>
-      </div>
-
-      <div className="bg-brand-800 border border-brand-amber p-8 rounded-lg mb-12">
-        <p className="uppercase tracking-widest text-sm text-brand-amber font-bold mb-3">Notre spécialisation</p>
-        <h2 className="text-2xl font-display font-black mb-4 text-brand-50">100% Odoo. Aucune dispersion.</h2>
-        <p className="text-brand-50/70 text-lg mb-4">
-          Contrairement aux cabinets généralistes, DooRecruit ne recrute que sur l'écosystème Odoo :
-          développement (Python, PostgreSQL, API), consultants fonctionnels (ventes, stocks, comptabilité),
-          chefs de projet, intégrateurs et administrateurs systèmes.
-        </p>
-        <p className="text-brand-50/70 text-lg">
-          Cette spécialisation nous permet d'évaluer réellement les compétences techniques d'un candidat
-          plutôt que de nous fier à un CV — et de parler le même langage que les entreprises qui déploient Odoo,
-          en France 🇫🇷 comme en Belgique 🇧🇪.
-        </p>
-      </div>
-
-      <h2 className="text-3xl font-display font-black mb-8 text-brand-50">Témoignages</h2>
-      <div className="grid md:grid-cols-3 gap-8 mb-12">
-        {testimonials.map((testimonial, i) => (
-          <div key={i} className="bg-brand-900 border border-brand-700 rounded-lg p-6">
-            <div className="flex gap-1 mb-4">
-              {[...Array(testimonial.rating)].map((_, i) => (
-                <Star key={i} size={16} fill="#DFA33A" color="#DFA33A" />
-              ))}
-            </div>
-            <p className="text-brand-50/70 mb-4 italic">"{testimonial.text}"</p>
-            <div>
-              <p className="font-bold text-brand-50">{testimonial.name}</p>
-              <p className="text-sm text-brand-50/50">{testimonial.role} @ {testimonial.company}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <div className="bg-brand-800 border border-brand-amber rounded-lg p-8 text-center">
-        <h2 className="text-2xl font-display font-black mb-4 text-brand-50">Vous cherchez à recruter?</h2>
-        <p className="mb-6 text-brand-50/70">Contactez notre équipe pour discuter de vos besoins.</p>
-        <button onClick={() => setCurrentPage('contact')} className="bg-brand-amber text-brand-950 px-8 py-3 rounded-full font-bold hover:bg-brand-amber-light transition">
-          Nous contacter
-        </button>
-      </div>
-    </div>
-  );
-}
-
-function ApproachPage({ setCurrentPage }) {
   const steps = [
     {
       number: '01',
@@ -1085,8 +1031,38 @@ function ApproachPage({ setCurrentPage }) {
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-12">
+      <h1 className="text-4xl font-display font-black mb-8 text-brand-50">À propos de DooRecruit</h1>
+
+      <div className="bg-brand-900 border border-brand-700 p-8 rounded-lg mb-12">
+        <h2 className="text-2xl font-bold mb-4 text-brand-50">Notre mission</h2>
+        <p className="text-brand-50/70 text-lg mb-4">
+          Chez DooRecruit, nous croyons que le recrutement Odoo mérite une expertise spécialisée.
+          Notre mission est de connecter les meilleurs talents Odoo avec les entreprises qui les cherchent,
+          en créant des matches authentiques et durables — en France 🇫🇷 comme en Belgique 🇧🇪.
+        </p>
+        <p className="text-brand-50/70 text-lg">
+          Nous comprenons la complexité de recruter pour l'écosystème Odoo - c'est pourquoi notre équipe
+          possède une expertise technique approfondie combinée à un vrai talent pour identifier les candidats idéaux.
+        </p>
+      </div>
+
+      <div className="bg-brand-800 border border-brand-amber p-8 rounded-lg mb-16">
+        <p className="uppercase tracking-widest text-sm text-brand-amber font-bold mb-3">Notre spécialisation</p>
+        <h2 className="text-2xl font-display font-black mb-4 text-brand-50">100% Odoo. Aucune dispersion.</h2>
+        <p className="text-brand-50/70 text-lg mb-4">
+          Contrairement aux cabinets généralistes, DooRecruit ne recrute que sur l'écosystème Odoo :
+          développement (Python, PostgreSQL, API), consultants fonctionnels (ventes, stocks, comptabilité),
+          chefs de projet, intégrateurs et administrateurs systèmes.
+        </p>
+        <p className="text-brand-50/70 text-lg">
+          Cette spécialisation nous permet d'évaluer réellement les compétences techniques d'un candidat
+          plutôt que de nous fier à un CV — et de parler le même langage que les entreprises qui déploient Odoo,
+          en France 🇫🇷 comme en Belgique 🇧🇪.
+        </p>
+      </div>
+
       <p className="uppercase tracking-widest text-sm text-brand-amber font-bold mb-3">Méthodologie</p>
-      <h1 className="text-4xl font-display font-black mb-4 text-brand-50">Notre approche</h1>
+      <h2 className="text-3xl font-display font-black mb-4 text-brand-50">Notre approche</h2>
       <p className="text-lg text-brand-50/60 mb-16 max-w-2xl">
         Une méthodologie éprouvée, taillée pour l'écosystème Odoo. Du brief initial à l'intégration,
         nous pilotons chaque étape du recrutement en France 🇫🇷 et en Belgique 🇧🇪.
@@ -1114,6 +1090,24 @@ function ApproachPage({ setCurrentPage }) {
             <div>
               <h4 className="font-bold text-brand-50 mb-1">{c.title}</h4>
               <p className="text-brand-50/60 text-sm">{c.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <h2 className="text-3xl font-display font-black mb-8 text-brand-50">Témoignages</h2>
+      <div className="grid md:grid-cols-3 gap-8 mb-16">
+        {testimonials.map((testimonial, i) => (
+          <div key={i} className="bg-brand-900 border border-brand-700 rounded-lg p-6">
+            <div className="flex gap-1 mb-4">
+              {[...Array(testimonial.rating)].map((_, i) => (
+                <Star key={i} size={16} fill="#DFA33A" color="#DFA33A" />
+              ))}
+            </div>
+            <p className="text-brand-50/70 mb-4 italic">"{testimonial.text}"</p>
+            <div>
+              <p className="font-bold text-brand-50">{testimonial.name}</p>
+              <p className="text-sm text-brand-50/50">{testimonial.role} @ {testimonial.company}</p>
             </div>
           </div>
         ))}
