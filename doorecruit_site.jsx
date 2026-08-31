@@ -1,6 +1,15 @@
 import React, { useState } from 'react';
 import { Menu, X, Search, Briefcase, Users, BookOpen, ChevronRight, Star, ArrowRight, Mail, Phone, Linkedin, TrendingUp, Target, Lightbulb, Sparkles, Zap, Globe, Shield, CheckCircle2, MapPin, ArrowLeft } from 'lucide-react';
 
+function Logo({ size = 28 }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M4 6 L13 4 L13 28 L4 26 Z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+      <path d="M19 4 L28 6 L28 26 L19 28 Z" fill="#DFA33A" />
+    </svg>
+  );
+}
+
 export default function DooRecruit() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState('home');
@@ -214,7 +223,8 @@ export default function DooRecruit() {
       <nav className="bg-brand-900 border-b border-brand-700 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <button onClick={() => setCurrentPage('home')} className="flex items-center gap-3">
+            <button onClick={() => setCurrentPage('home')} className="flex items-center gap-2.5">
+              <span className="text-brand-50"><Logo size={26} /></span>
               <div className="text-2xl font-display font-black tracking-tight text-brand-50">
                 DOO<span className="text-brand-amber">RECRUIT</span>
               </div>
@@ -262,8 +272,11 @@ export default function DooRecruit() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <div className="text-xl font-display font-black mb-3">
-                DOO<span className="text-brand-amber">RECRUIT</span>
+              <div className="flex items-center gap-2 mb-3">
+                <span className="text-brand-50"><Logo size={22} /></span>
+                <span className="text-xl font-display font-black">
+                  DOO<span className="text-brand-amber">RECRUIT</span>
+                </span>
               </div>
               <p className="text-brand-50/50">Le match juste. Sans blabla.</p>
               <p className="text-brand-50/40 text-sm mt-2">France 🇫🇷 • Belgique 🇧🇪</p>
@@ -323,10 +336,10 @@ function HomePage({ setCurrentPage }) {
           </p>
           <p className="text-sm text-brand-50/40 mb-8">Recrutement en France 🇫🇷 et en Belgique 🇧🇪</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
-            <button onClick={() => setCurrentPage('talents')} className="bg-brand-amber text-brand-950 px-8 py-3 rounded-lg font-bold hover:bg-brand-amber-light transition flex items-center justify-center gap-2">
+            <button onClick={() => setCurrentPage('talents')} className="bg-brand-amber text-brand-950 px-8 py-3 rounded-full font-bold hover:bg-brand-amber-light transition flex items-center justify-center gap-2">
               Je cherche un nouveau rôle <ArrowRight size={20} />
             </button>
-            <button onClick={() => setCurrentPage('contact')} className="border border-brand-50/30 text-brand-50 px-8 py-3 rounded-lg font-bold hover:border-brand-amber hover:text-brand-amber transition flex items-center justify-center gap-2">
+            <button onClick={() => setCurrentPage('contact')} className="border border-brand-50/30 text-brand-50 px-8 py-3 rounded-full font-bold hover:border-brand-amber hover:text-brand-amber transition flex items-center justify-center gap-2">
               Je cherche un talent <ArrowRight size={20} />
             </button>
           </div>
@@ -398,7 +411,7 @@ function HomePage({ setCurrentPage }) {
             ))}
           </div>
           <div className="text-center">
-            <button onClick={() => setCurrentPage('approach')} className="border border-brand-50/30 text-brand-50 px-8 py-3 rounded-lg font-bold hover:border-brand-amber hover:text-brand-amber transition inline-flex items-center gap-2">
+            <button onClick={() => setCurrentPage('approach')} className="border border-brand-50/30 text-brand-50 px-8 py-3 rounded-full font-bold hover:border-brand-amber hover:text-brand-amber transition inline-flex items-center gap-2">
               Découvrir notre méthodologie complète <ArrowRight size={20} />
             </button>
           </div>
@@ -420,7 +433,7 @@ function HomePage({ setCurrentPage }) {
             ))}
           </div>
           <div className="text-center">
-            <button onClick={() => setCurrentPage('jobs')} className="bg-brand-amber text-brand-950 px-8 py-3 rounded-lg font-bold hover:bg-brand-amber-light transition">
+            <button onClick={() => setCurrentPage('jobs')} className="bg-brand-amber text-brand-950 px-8 py-3 rounded-full font-bold hover:bg-brand-amber-light transition">
               Voir toutes les offres
             </button>
           </div>
@@ -432,7 +445,7 @@ function HomePage({ setCurrentPage }) {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-display font-black mb-6 text-brand-50">Prêt à trouver votre prochain talent Odoo ?</h2>
           <p className="text-xl mb-8 text-brand-50/60">Contactez-nous pour discuter de vos besoins de recrutement.</p>
-          <button onClick={() => setCurrentPage('contact')} className="bg-brand-amber text-brand-950 px-8 py-3 rounded-lg font-bold hover:bg-brand-amber-light transition">
+          <button onClick={() => setCurrentPage('contact')} className="bg-brand-amber text-brand-950 px-8 py-3 rounded-full font-bold hover:bg-brand-amber-light transition">
             Nous contacter
           </button>
         </div>
@@ -483,16 +496,9 @@ function JobsPage({ jobs, filterLevel, filterCountry, setFilterLevel, setFilterC
       {/* Jobs Grid */}
       <div className="grid md:grid-cols-2 gap-6">
         {jobs.map(job => (
-          <div key={job.id} className="bg-brand-900 border border-brand-700 rounded-lg p-6 hover:border-brand-amber transition">
-            <div className="flex justify-between items-start mb-4">
-              <div>
-                <h3 className="text-xl font-bold text-brand-50">{job.title}</h3>
-                <p className="text-brand-50/60">{job.sector} <span className="text-brand-50/30">· client confidentiel</span></p>
-              </div>
-              <div className="bg-brand-800 text-brand-amber p-2 rounded-lg shrink-0">
-                <Briefcase size={20} />
-              </div>
-            </div>
+          <div key={job.id} className="bg-brand-900 border border-brand-700 border-l-2 border-l-brand-amber rounded-lg p-6 hover:border-brand-amber transition">
+            <h3 className="text-xl font-bold text-brand-50">{job.title}</h3>
+            <p className="text-brand-50/60 mb-4">{job.sector} <span className="text-brand-50/30">· client confidentiel</span></p>
             <p className="text-brand-50/70 mb-4">{job.description}</p>
             <div className="flex flex-wrap gap-2 mb-4">
               <LocationBadge location={job.location} country={job.country} />
@@ -505,7 +511,7 @@ function JobsPage({ jobs, filterLevel, filterCountry, setFilterLevel, setFilterC
             <div className="flex justify-end items-center text-sm text-brand-50/60 mb-4">
               <span className="font-bold text-brand-amber">{job.salary}</span>
             </div>
-            <button onClick={() => openJob(job.id)} className="w-full bg-brand-amber text-brand-950 py-2 rounded-lg hover:bg-brand-amber-light font-bold transition">
+            <button onClick={() => openJob(job.id)} className="w-full bg-brand-amber text-brand-950 py-2 rounded-full hover:bg-brand-amber-light font-bold transition">
               Voir l'offre →
             </button>
           </div>
@@ -581,7 +587,7 @@ function JobDetailPage({ job, setCurrentPage }) {
         </div>
       </div>
 
-      <button onClick={() => setCurrentPage('talents')} className="w-full bg-brand-amber text-brand-950 py-3 rounded-lg font-bold hover:bg-brand-amber-light transition">
+      <button onClick={() => setCurrentPage('talents')} className="w-full bg-brand-amber text-brand-950 py-3 rounded-full font-bold hover:bg-brand-amber-light transition">
         Postuler à cette offre
       </button>
     </div>
@@ -595,11 +601,10 @@ function BlogPage({ articles }) {
       <div className="grid md:grid-cols-2 gap-8">
         {articles.map(article => (
           <div key={article.id} className="bg-brand-900 border border-brand-700 rounded-lg p-6 hover:border-brand-amber transition">
-            <div className="bg-brand-800 text-brand-amber w-10 h-10 rounded-lg flex items-center justify-center mb-4">
-              <article.icon size={20} />
-            </div>
             <div className="flex justify-between items-start mb-3">
-              <span className="bg-brand-800 text-brand-amber-light text-xs px-3 py-1 rounded-full">{article.category}</span>
+              <span className="inline-flex items-center gap-1.5 text-brand-amber-light text-xs font-bold uppercase tracking-wide">
+                <article.icon size={14} /> {article.category}
+              </span>
               <span className="text-brand-50/40 text-sm">{article.date}</span>
             </div>
             <h3 className="text-xl font-bold mb-3 text-brand-50">{article.title}</h3>
@@ -950,7 +955,7 @@ function TalentsPage() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-brand-amber text-brand-950 py-3 rounded-lg font-bold hover:bg-brand-amber-light transition disabled:opacity-50"
+            className="w-full bg-brand-amber text-brand-950 py-3 rounded-full font-bold hover:bg-brand-amber-light transition disabled:opacity-50"
           >
             {loading ? 'Envoi en cours...' : 'Envoyer ma candidature'}
           </button>
@@ -1018,7 +1023,7 @@ function AboutPage({ testimonials, setCurrentPage }) {
       <div className="bg-brand-800 border border-brand-amber rounded-lg p-8 text-center">
         <h2 className="text-2xl font-display font-black mb-4 text-brand-50">Vous cherchez à recruter?</h2>
         <p className="mb-6 text-brand-50/70">Contactez notre équipe pour discuter de vos besoins.</p>
-        <button onClick={() => setCurrentPage('contact')} className="bg-brand-amber text-brand-950 px-8 py-3 rounded-lg font-bold hover:bg-brand-amber-light transition">
+        <button onClick={() => setCurrentPage('contact')} className="bg-brand-amber text-brand-950 px-8 py-3 rounded-full font-bold hover:bg-brand-amber-light transition">
           Nous contacter
         </button>
       </div>
@@ -1111,7 +1116,7 @@ function ApproachPage({ setCurrentPage }) {
       <div className="bg-brand-800 border border-brand-amber rounded-lg p-8 text-center">
         <h2 className="text-2xl font-display font-black mb-4 text-brand-50">Prêt à lancer votre recrutement ?</h2>
         <p className="mb-6 text-brand-50/70">Décrivez votre besoin, notre équipe revient vers vous sous 24h.</p>
-        <button onClick={() => setCurrentPage('contact')} className="bg-brand-amber text-brand-950 px-8 py-3 rounded-lg font-bold hover:bg-brand-amber-light transition">
+        <button onClick={() => setCurrentPage('contact')} className="bg-brand-amber text-brand-950 px-8 py-3 rounded-full font-bold hover:bg-brand-amber-light transition">
           Recruter un talent
         </button>
       </div>
@@ -1514,7 +1519,7 @@ function ContactPage() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-brand-amber text-brand-950 py-3 rounded-lg font-bold hover:bg-brand-amber-light transition disabled:opacity-50"
+            className="w-full bg-brand-amber text-brand-950 py-3 rounded-full font-bold hover:bg-brand-amber-light transition disabled:opacity-50"
           >
             {loading ? 'Envoi en cours...' : 'Envoyer mon brief de recrutement'}
           </button>
@@ -1615,7 +1620,7 @@ function ServiceCard({ icon, title, description }) {
 
 function JobCard({ job }) {
   return (
-    <div className="bg-brand-950 rounded-lg p-6 border border-brand-700 hover:border-brand-amber transition">
+    <div className="bg-brand-950 rounded-lg p-6 border border-brand-700 border-l-2 border-l-brand-amber hover:border-brand-amber transition">
       <h3 className="text-lg font-bold text-brand-50 mb-2">{job.title}</h3>
       <p className="text-brand-50/60 mb-4">{job.sector} • {job.location}</p>
       <p className="text-xl font-bold text-brand-amber">{job.salary}</p>
