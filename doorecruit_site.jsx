@@ -64,11 +64,11 @@ export default function DooRecruit() {
     },
     {
       id: 5,
-      title: 'Specialist Intégration Odoo',
+      title: 'Lead Développeur Intégration Odoo',
       sector: 'Intégrateur Odoo',
       location: 'Nantes',
       country: 'France',
-      level: 'senior',
+      level: 'lead',
       salary: '55-70k€',
       modules: ['Intégrations API', 'Webhooks', 'Synchronisation données'],
       description: 'Expertiser les intégrations complexes entre Odoo et systèmes tiers.',
@@ -466,6 +466,7 @@ function JobsPage({ jobs, filterLevel, filterCountry, setFilterLevel, setFilterC
               <option value="junior">Junior</option>
               <option value="mid">Intermédiaire</option>
               <option value="senior">Senior</option>
+              <option value="lead">Lead</option>
             </select>
           </div>
           <div>
@@ -545,7 +546,7 @@ function JobDetailPage({ job, setCurrentPage }) {
       <div className="flex flex-wrap gap-2 mb-8">
         <LocationBadge location={job.location} country={job.country} />
         <span className="bg-brand-800 border border-brand-700 text-brand-50/80 text-xs font-medium px-2.5 py-1 rounded-full">
-          {job.level === 'junior' ? 'Junior' : job.level === 'senior' ? 'Senior' : 'Intermédiaire'}
+          {{ junior: 'Junior', mid: 'Intermédiaire', senior: 'Senior', lead: 'Lead' }[job.level] || job.level}
         </span>
         <span className="bg-brand-amber text-brand-950 text-xs font-bold px-2.5 py-1 rounded-full">
           {job.salary}
