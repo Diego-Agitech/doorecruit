@@ -325,8 +325,11 @@ function HomePage({ setCurrentPage }) {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-brand-950 py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="relative bg-brand-950 py-20 px-4 overflow-hidden">
+        <div className="absolute -right-24 -top-24 text-brand-50/[0.04] pointer-events-none" aria-hidden="true">
+          <Logo size={420} />
+        </div>
+        <div className="relative max-w-7xl mx-auto text-center">
           <p className="uppercase tracking-widest text-sm text-brand-amber font-bold mb-4">Le match juste. Sans blabla.</p>
           <h1 className="text-5xl md:text-6xl font-display font-black mb-6 text-brand-50">
             Recrutez les meilleurs talents Odoo
@@ -441,8 +444,11 @@ function HomePage({ setCurrentPage }) {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 px-4">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="relative py-12 px-4 overflow-hidden">
+        <div className="absolute -left-20 -bottom-20 text-brand-50/[0.04] pointer-events-none" aria-hidden="true">
+          <Logo size={320} />
+        </div>
+        <div className="relative max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-display font-black mb-6 text-brand-50">Prêt à trouver votre prochain talent Odoo ?</h2>
           <p className="text-xl mb-8 text-brand-50/60">Contactez-nous pour discuter de vos besoins de recrutement.</p>
           <button onClick={() => setCurrentPage('contact')} className="bg-brand-amber text-brand-950 px-8 py-3 rounded-full font-bold hover:bg-brand-amber-light transition">

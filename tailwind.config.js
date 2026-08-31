@@ -19,7 +19,7 @@ export default {
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
-        display: ['Archivo', 'sans-serif'],
+        display: ['Public Sans', 'sans-serif'],
       },
     },
   },
