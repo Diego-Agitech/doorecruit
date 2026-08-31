@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import { Menu, X, Search, Briefcase, Users, BookOpen, ChevronRight, Star, ArrowRight, Mail, Phone, Linkedin, TrendingUp, Target, Lightbulb, Sparkles, Zap, Globe, Shield, CheckCircle2 } from 'lucide-react';
+import { Menu, X, Search, Briefcase, Users, BookOpen, ChevronRight, Star, ArrowRight, Mail, Phone, Linkedin, TrendingUp, Target, Lightbulb, Sparkles, Zap, Globe, Shield, CheckCircle2, MapPin, ArrowLeft } from 'lucide-react';
 
 export default function DooRecruit() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState('home');
+  const [selectedJobId, setSelectedJobId] = useState(null);
   const [filterRole, setFilterRole] = useState('all');
   const [filterLevel, setFilterLevel] = useState('all');
+  const [filterCountry, setFilterCountry] = useState('all');
 
   const jobs = [
     {
@@ -13,60 +15,104 @@ export default function DooRecruit() {
       title: 'Développeur Odoo Senior',
       sector: 'Éditeur logiciel',
       location: 'Paris',
+      country: 'France',
       level: 'senior',
       salary: '50-65k€',
       modules: ['Python', 'PostgreSQL', 'Développement Backend'],
-      description: 'Nous recherchons un développeur Odoo expérimenté pour rejoindre notre équipe.'
+      description: 'Nous recherchons un développeur Odoo expérimenté pour rejoindre notre équipe.',
+      fullDescription: 'Au sein d\'une équipe technique établie, vous prendrez en charge le développement de modules Odoo sur mesure, la maintenance de l\'existant et la montée de version. Vous travaillerez en lien direct avec les consultants fonctionnels pour transformer les besoins métier en solutions techniques robustes.',
+      responsibilities: ['Développer et maintenir des modules Odoo custom', 'Participer aux revues de code et à l\'architecture technique', 'Accompagner la montée de version Odoo', 'Collaborer avec les consultants fonctionnels']
     },
     {
       id: 2,
       title: 'Consultant Fonctionnel Odoo',
       sector: 'Cabinet de conseil ERP',
       location: 'Lyon',
+      country: 'France',
       level: 'mid',
       salary: '40-55k€',
       modules: ['Ventes', 'Stocks', 'Comptabilité'],
-      description: 'Vous allez accompagner nos clients dans leurs projets de transformation Odoo.'
+      description: 'Vous allez accompagner nos clients dans leurs projets de transformation Odoo.',
+      fullDescription: 'Vous interviendrez sur des projets de déploiement et d\'optimisation Odoo pour une clientèle variée (PME, ETI). De l\'analyse des besoins au paramétrage, en passant par la formation des utilisateurs, vous êtes le garant de la réussite fonctionnelle du projet.',
+      responsibilities: ['Analyser les besoins métier des clients', 'Paramétrer les modules Ventes, Stocks et Comptabilité', 'Former les utilisateurs finaux', 'Assurer le support post-déploiement']
     },
     {
       id: 3,
       title: 'Chef de Projet Odoo',
       sector: 'Agence digitale',
       location: 'Toulouse',
+      country: 'France',
       level: 'mid',
       salary: '45-60k€',
       modules: ['Gestion de projet', 'Agile', 'Relation client'],
-      description: 'Piloter des projets Odoo complets de la conception à la mise en production.'
+      description: 'Piloter des projets Odoo complets de la conception à la mise en production.',
+      fullDescription: 'Véritable chef d\'orchestre, vous pilotez des projets d\'implémentation Odoo de bout en bout : cadrage, planning, coordination des équipes techniques et fonctionnelles, et relation client jusqu\'à la mise en production.',
+      responsibilities: ['Cadrer et planifier les projets Odoo', 'Coordonner les équipes techniques et fonctionnelles', 'Être l\'interlocuteur privilégié du client', 'Piloter le budget et les délais']
     },
     {
       id: 4,
       title: 'Développeur Odoo Junior',
       sector: 'Start-up SaaS',
       location: 'Bordeaux',
+      country: 'France',
       level: 'junior',
       salary: '28-35k€',
       modules: ['Python', 'Javascript', 'API'],
-      description: 'Débuter votre carrière dans un environnement dynamique et bienveillant.'
+      description: 'Débuter votre carrière dans un environnement dynamique et bienveillant.',
+      fullDescription: 'Vous rejoignez une équipe technique bienveillante pour développer vos compétences sur Odoo. Encadré par des développeurs seniors, vous participerez à des projets concrets tout en montant en compétence sur le framework et l\'écosystème Python.',
+      responsibilities: ['Développer des fonctionnalités sous supervision', 'Corriger des anomalies', 'Monter en compétence sur Odoo et Python', 'Participer aux points d\'équipe agile']
     },
     {
       id: 5,
       title: 'Specialist Intégration Odoo',
       sector: 'Intégrateur Odoo',
       location: 'Nantes',
+      country: 'France',
       level: 'senior',
       salary: '55-70k€',
       modules: ['Intégrations API', 'Webhooks', 'Synchronisation données'],
-      description: 'Expertiser les intégrations complexes entre Odoo et systèmes tiers.'
+      description: 'Expertiser les intégrations complexes entre Odoo et systèmes tiers.',
+      fullDescription: 'Vous concevez et développez les interfaces entre Odoo et les systèmes tiers du client (CRM, logistique, e-commerce). Vous êtes garant de la fiabilité et de la performance des flux de données.',
+      responsibilities: ['Concevoir des architectures d\'intégration', 'Développer des API et webhooks', 'Fiabiliser les synchronisations de données', 'Documenter les intégrations']
     },
     {
       id: 6,
       title: 'Admin Odoo',
       sector: 'Groupe industriel',
       location: 'Lille',
+      country: 'France',
       level: 'junior',
       salary: '30-38k€',
       modules: ['Administration système', 'Utilisateurs', 'Maintenance'],
-      description: 'Gérer et maintenir l\'infrastructure Odoo de nos clients.'
+      description: 'Gérer et maintenir l\'infrastructure Odoo de nos clients.',
+      fullDescription: 'Vous assurez le bon fonctionnement quotidien de l\'environnement Odoo : gestion des utilisateurs et des droits, maintenance applicative, suivi des performances et support de premier niveau.',
+      responsibilities: ['Gérer les utilisateurs et les droits d\'accès', 'Assurer la maintenance applicative', 'Suivre les performances de l\'instance Odoo', 'Traiter les tickets de support niveau 1']
+    },
+    {
+      id: 7,
+      title: 'Développeur Odoo Confirmé',
+      sector: 'Éditeur logiciel',
+      location: 'Bruxelles',
+      country: 'Belgique',
+      level: 'mid',
+      salary: '48-58k€',
+      modules: ['Python', 'PostgreSQL', 'API REST'],
+      description: 'Rejoignez une équipe technique à taille humaine pour développer des solutions Odoo sur mesure.',
+      fullDescription: 'Au sein d\'une structure basée à Bruxelles, vous développez et maintenez des modules Odoo pour une clientèle belge et internationale. Vous travaillez en méthode agile, avec une forte autonomie technique.',
+      responsibilities: ['Développer des modules Odoo sur mesure', 'Participer aux choix d\'architecture', 'Assurer la qualité du code (tests, revues)', 'Échanger directement avec les clients belges']
+    },
+    {
+      id: 8,
+      title: 'Consultant Fonctionnel Odoo',
+      sector: 'Cabinet de conseil ERP',
+      location: 'Anvers',
+      country: 'Belgique',
+      level: 'mid',
+      salary: '42-52k€',
+      modules: ['Achats', 'Stocks', 'Logistique'],
+      description: 'Accompagnez des entreprises belges dans leur transformation digitale avec Odoo.',
+      fullDescription: 'Vous intervenez sur des projets de déploiement Odoo auprès de clients belges, principalement dans le secteur logistique et industriel. Vous maîtrisez le paramétrage des modules Achats, Stocks et Logistique.',
+      responsibilities: ['Analyser les processus achats et logistique', 'Paramétrer les modules Odoo correspondants', 'Former les équipes clientes', 'Rédiger la documentation fonctionnelle']
     }
   ];
 
@@ -132,13 +178,21 @@ export default function DooRecruit() {
   const filteredJobs = jobs.filter(job => {
     if (filterRole !== 'all' && job.level !== filterRole) return false;
     if (filterLevel !== 'all' && job.level !== filterLevel) return false;
+    if (filterCountry !== 'all' && job.country !== filterCountry) return false;
     return true;
   });
+
+  const openJob = (id) => {
+    setSelectedJobId(id);
+    setCurrentPage('job-detail');
+  };
 
   const renderPage = () => {
     switch(currentPage) {
       case 'jobs':
-        return <JobsPage jobs={filteredJobs} filterRole={filterRole} filterLevel={filterLevel} setFilterRole={setFilterRole} setFilterLevel={setFilterLevel} />;
+        return <JobsPage jobs={filteredJobs} filterLevel={filterLevel} filterCountry={filterCountry} setFilterLevel={setFilterLevel} setFilterCountry={setFilterCountry} openJob={openJob} />;
+      case 'job-detail':
+        return <JobDetailPage job={jobs.find(j => j.id === selectedJobId)} setCurrentPage={setCurrentPage} />;
       case 'blog':
         return <BlogPage articles={articles} />;
       case 'talents':
@@ -387,7 +441,17 @@ function HomePage({ setCurrentPage }) {
   );
 }
 
-function JobsPage({ jobs, filterRole, filterLevel, setFilterRole, setFilterLevel }) {
+function LocationBadge({ location, country }) {
+  const flag = country === 'Belgique' ? '🇧🇪' : '🇫🇷';
+  return (
+    <span className="inline-flex items-center gap-1 bg-brand-800 border border-brand-700 text-brand-50/80 text-xs font-medium px-2.5 py-1 rounded-full">
+      <MapPin size={12} className="text-brand-amber" />
+      {location} <span aria-hidden="true">{flag}</span>
+    </span>
+  );
+}
+
+function JobsPage({ jobs, filterLevel, filterCountry, setFilterLevel, setFilterCountry, openJob }) {
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
       <h1 className="text-4xl font-display font-black mb-8 text-brand-50">Offres d'emploi</h1>
@@ -402,6 +466,14 @@ function JobsPage({ jobs, filterRole, filterLevel, setFilterRole, setFilterLevel
               <option value="junior">Junior</option>
               <option value="mid">Intermédiaire</option>
               <option value="senior">Senior</option>
+            </select>
+          </div>
+          <div>
+            <label className="block text-sm font-bold mb-2 text-brand-50">Pays</label>
+            <select value={filterCountry} onChange={(e) => setFilterCountry(e.target.value)} className="w-full p-2 bg-brand-950 border border-brand-700 rounded text-brand-50 focus:outline-none focus:border-brand-amber focus:ring-2 focus:ring-brand-amber/40">
+              <option value="all">Tous les pays</option>
+              <option value="France">🇫🇷 France</option>
+              <option value="Belgique">🇧🇪 Belgique</option>
             </select>
           </div>
         </div>
@@ -422,22 +494,95 @@ function JobsPage({ jobs, filterRole, filterLevel, setFilterRole, setFilterLevel
             </div>
             <p className="text-brand-50/70 mb-4">{job.description}</p>
             <div className="flex flex-wrap gap-2 mb-4">
+              <LocationBadge location={job.location} country={job.country} />
               {job.modules.slice(0, 2).map((module, i) => (
                 <span key={i} className="bg-brand-800 text-brand-amber-light text-xs px-3 py-1 rounded-full">
                   {module}
                 </span>
               ))}
             </div>
-            <div className="flex justify-between items-center text-sm text-brand-50/60">
-              <span>{job.location}</span>
+            <div className="flex justify-end items-center text-sm text-brand-50/60 mb-4">
               <span className="font-bold text-brand-amber">{job.salary}</span>
             </div>
-            <button className="mt-4 w-full bg-brand-amber text-brand-950 py-2 rounded-lg hover:bg-brand-amber-light font-bold transition">
-              Postuler →
+            <button onClick={() => openJob(job.id)} className="w-full bg-brand-amber text-brand-950 py-2 rounded-lg hover:bg-brand-amber-light font-bold transition">
+              Voir l'offre →
             </button>
           </div>
         ))}
       </div>
+    </div>
+  );
+}
+
+function JobDetailPage({ job, setCurrentPage }) {
+  if (!job) {
+    return (
+      <div className="max-w-3xl mx-auto px-4 py-12 text-center">
+        <p className="text-brand-50/60 mb-4">Cette offre n'est plus disponible.</p>
+        <button onClick={() => setCurrentPage('jobs')} className="text-brand-amber font-bold hover:text-brand-amber-light">
+          Retour aux offres
+        </button>
+      </div>
+    );
+  }
+
+  return (
+    <div className="max-w-3xl mx-auto px-4 py-12">
+      <button onClick={() => setCurrentPage('jobs')} className="inline-flex items-center gap-2 text-brand-50/60 hover:text-brand-amber mb-8 text-sm font-medium transition">
+        <ArrowLeft size={16} /> Retour aux offres
+      </button>
+
+      <div className="flex items-start gap-4 mb-4">
+        <div className="bg-brand-800 text-brand-amber p-3 rounded-lg shrink-0">
+          <Briefcase size={24} />
+        </div>
+        <div>
+          <h1 className="text-3xl font-display font-black text-brand-50 mb-1">{job.title}</h1>
+          <p className="text-brand-50/60">{job.sector} <span className="text-brand-50/30">· client confidentiel</span></p>
+        </div>
+      </div>
+
+      <div className="flex flex-wrap gap-2 mb-8">
+        <LocationBadge location={job.location} country={job.country} />
+        <span className="bg-brand-800 border border-brand-700 text-brand-50/80 text-xs font-medium px-2.5 py-1 rounded-full">
+          {job.level === 'junior' ? 'Junior' : job.level === 'senior' ? 'Senior' : 'Intermédiaire'}
+        </span>
+        <span className="bg-brand-amber text-brand-950 text-xs font-bold px-2.5 py-1 rounded-full">
+          {job.salary}
+        </span>
+      </div>
+
+      <div className="bg-brand-900 border border-brand-700 rounded-lg p-8 mb-8">
+        <h2 className="text-lg font-bold text-brand-50 mb-3">Le poste</h2>
+        <p className="text-brand-50/70 mb-6">{job.fullDescription || job.description}</p>
+
+        {job.responsibilities && (
+          <>
+            <h2 className="text-lg font-bold text-brand-50 mb-3">Vos missions</h2>
+            <ul className="space-y-2 mb-6">
+              {job.responsibilities.map((r, i) => (
+                <li key={i} className="flex items-start gap-2 text-brand-50/70">
+                  <CheckCircle2 size={16} className="text-brand-amber mt-1 shrink-0" />
+                  {r}
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+
+        <h2 className="text-lg font-bold text-brand-50 mb-3">Compétences Odoo</h2>
+        <div className="flex flex-wrap gap-2">
+          {job.modules.map((module, i) => (
+            <span key={i} className="bg-brand-800 text-brand-amber-light text-xs px-3 py-1 rounded-full">
+              {module}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <button onClick={() => setCurrentPage('talents')} className="w-full bg-brand-amber text-brand-950 py-3 rounded-lg font-bold hover:bg-brand-amber-light transition">
+        Postuler à cette offre
+      </button>
     </div>
   );
 }
