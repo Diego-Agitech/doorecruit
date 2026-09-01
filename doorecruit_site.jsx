@@ -124,23 +124,20 @@ export default function DooRecruit() {
 
   const testimonials = [
     {
-      name: 'Pierre Martin',
+      name: 'Pierre',
       role: 'Développeur Odoo',
-      company: 'TechCorp',
       text: 'DooRecruit m\'a trouvé un poste parfait en 2 semaines. Ils connaissent vraiment le secteur !',
       rating: 5
     },
     {
-      name: 'Sophie Durand',
+      name: 'Sophie',
       role: 'Directrice RH',
-      company: 'ERP Consulting',
       text: 'Grâce à DooRecruit, nous avons recruté 5 experts Odoo. Processus fluide et professionnel.',
       rating: 5
     },
     {
-      name: 'Marc Leclerc',
+      name: 'Marc',
       role: 'Consultant Fonctionnel',
-      company: 'Digital Plus',
       text: 'L\'expertise de l\'équipe sur Odoo est impressionnante. Ils m\'ont très bien accompagné.',
       rating: 5
     }
@@ -1068,7 +1065,7 @@ function AboutPage({ testimonials, setCurrentPage }) {
             <p className="text-brand-50/70 mb-4 italic">"{testimonial.text}"</p>
             <div>
               <p className="font-bold text-brand-50">{testimonial.name}</p>
-              <p className="text-sm text-brand-50/50">{testimonial.role} @ {testimonial.company}</p>
+              <p className="text-sm text-brand-50/50">{testimonial.role}</p>
             </div>
           </div>
         ))}
