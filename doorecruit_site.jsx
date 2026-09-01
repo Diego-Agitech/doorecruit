@@ -328,7 +328,7 @@ function HomePage({ setCurrentPage, jobs }) {
               <p className="text-brand-50/60">Talents Odoo dans notre réseau</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-display font-black text-brand-amber mb-2">120+</div>
+              <div className="text-4xl font-display font-black text-brand-amber mb-2">45+</div>
               <p className="text-brand-50/60">Placements réussis</p>
             </div>
             <div className="text-center">
